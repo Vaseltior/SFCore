@@ -51,9 +51,6 @@
 		F55DE5501AA3D57F0037657D /* SFFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFileManager.swift; sourceTree = "<group>"; };
 		F55DE5511AA3D57F0037657D /* SFFileManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFileManagerProtocol.swift; sourceTree = "<group>"; };
 		F55DE5711AA3D7C80037657D /* SFErrors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFErrors.framework; path = Carthage/Build/iOS/SFErrors.framework; sourceTree = "<group>"; };
-		F55DE5791AA3D80D0037657D /* SFCore_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFCore_iOS.h; sourceTree = "<group>"; };
-		F55DE57B1AA3D80D0037657D /* SFCore_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFCore_iOS.m; sourceTree = "<group>"; };
-		F55DE5871AA3D80D0037657D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F55DE59C1AA3E8EA0037657D /* SFQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFQueue.swift; sourceTree = "<group>"; };
 		F55DE59D1AA3E8EA0037657D /* SFSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,8 +82,6 @@
 				F55DE5711AA3D7C80037657D /* SFErrors.framework */,
 				F55DE5271AA351D10037657D /* SFCore */,
 				F55DE5341AA351D20037657D /* SFCoreTests */,
-				F55DE5781AA3D80D0037657D /* SFCore-iOS */,
-				F55DE5851AA3D80D0037657D /* SFCore-iOSTests */,
 				F55DE5261AA351D10037657D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,31 +157,6 @@
 				F55DE5511AA3D57F0037657D /* SFFileManagerProtocol.swift */,
 			);
 			path = _files;
-			sourceTree = "<group>";
-		};
-		F55DE5781AA3D80D0037657D /* SFCore-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F55DE5791AA3D80D0037657D /* SFCore_iOS.h */,
-				F55DE57B1AA3D80D0037657D /* SFCore_iOS.m */,
-			);
-			path = "SFCore-iOS";
-			sourceTree = "<group>";
-		};
-		F55DE5851AA3D80D0037657D /* SFCore-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				F55DE5861AA3D80D0037657D /* Supporting Files */,
-			);
-			path = "SFCore-iOSTests";
-			sourceTree = "<group>";
-		};
-		F55DE5861AA3D80D0037657D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F55DE5871AA3D80D0037657D /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F55DE59B1AA3E8EA0037657D /* _structures */ = {
@@ -315,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "if [ ! -f /usr/local/bin/carthage ]; then\n    echo \"File not found!\"\nelse\n    /usr/local/bin/carthage copy-frameworks\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
