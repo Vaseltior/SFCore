@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SFCore-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SFCore.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>F55DE52F1AA351D20037657D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F55DE5761AA3D80D0037657D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F55DE5801AA3D80D0037657D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

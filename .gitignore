@@ -17,4 +17,5 @@ profile
 DerivedData
 .idea/
 *.orig
+docs
 Carthage
