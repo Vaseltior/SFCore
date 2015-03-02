@@ -1,0 +1,3 @@
+framework module Snap {
+    header "Snap-Swift.h"
+}

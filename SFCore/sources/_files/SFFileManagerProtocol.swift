@@ -35,7 +35,7 @@ import SFErrors
 ///
 /// A protocol for file manipulation
 ///
-protocol SFFileManagerProtocol {
+public protocol SFFileManagerProtocol {
     ///
     /// A file location for an application's main bundle.
     ///
