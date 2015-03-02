@@ -32,6 +32,10 @@
 		F55DE5AD1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */; };
 		F55DE5AF1AA402A50037657D /* Snap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5AE1AA402A50037657D /* Snap.framework */; };
 		F55DE5B01AA402B10037657D /* Snap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5AE1AA402A50037657D /* Snap.framework */; };
+		F55DE5B21AA448940037657D /* Int+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B11AA448940037657D /* Int+SFBoundi.swift */; };
+		F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B11AA448940037657D /* Int+SFBoundi.swift */; };
+		F55DE5B51AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
+		F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,8 @@
 		F55DE5A81AA3FBD00037657D /* NSDate+SFComputations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFComputations.swift"; sourceTree = "<group>"; };
 		F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFBeginEnd.swift"; sourceTree = "<group>"; };
 		F55DE5AE1AA402A50037657D /* Snap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Snap.framework; path = Carthage/Build/iOS/Snap.framework; sourceTree = "<group>"; };
+		F55DE5B11AA448940037657D /* Int+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+SFBoundi.swift"; sourceTree = "<group>"; };
+		F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt+SFBoundi.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,8 @@
 				F55DE54C1AA3D47B0037657D /* String+SFCharacters.swift */,
 				F55DE5A81AA3FBD00037657D /* NSDate+SFComputations.swift */,
 				F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */,
+				F55DE5B11AA448940037657D /* Int+SFBoundi.swift */,
+				F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */,
 			);
 			path = _extensions;
 			sourceTree = "<group>";
@@ -312,7 +320,9 @@
 				F55DE54A1AA3D2060037657D /* SFBlocks.swift in Sources */,
 				F55DE5A21AA3E8EA0037657D /* SFSet.swift in Sources */,
 				F55DE5AC1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
+				F55DE5B21AA448940037657D /* Int+SFBoundi.swift in Sources */,
 				F55DE5481AA3D2060037657D /* Array+SG.swift in Sources */,
+				F55DE5B51AA448B00037657D /* UInt+SFBoundi.swift in Sources */,
 				F55DE59E1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5521AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F55DE5541AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
@@ -328,6 +338,8 @@
 				F55DE5531AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F55DE5AD1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
 				F55DE5A31AA3E8EA0037657D /* SFSet.swift in Sources */,
+				F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */,
+				F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */,
 				F55DE5AA1AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
 				F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,

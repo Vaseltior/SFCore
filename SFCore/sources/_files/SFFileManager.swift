@@ -41,14 +41,14 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// A file location for an application's main bundle.
     ///
-    class func mainBundleDirectory() -> String? {
+    public class func mainBundleDirectory() -> String? {
         return NSBundle.mainBundle().resourcePath
     }
     
     ///
     /// A file location for an application's caches directory.
     ///
-    class func cachesDirectory() -> String {
+    public class func cachesDirectory() -> String {
         let paths:[AnyObject]! = NSSearchPathForDirectoriesInDomains(
             NSSearchPathDirectory.CachesDirectory,
             NSSearchPathDomainMask.UserDomainMask,
@@ -65,7 +65,7 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// A file location for an application's documents directory.
     ///
-    class func documentsDirectory() -> String {
+    public class func documentsDirectory() -> String {
         let paths:[AnyObject]! = NSSearchPathForDirectoriesInDomains(
             NSSearchPathDirectory.DocumentDirectory,
             NSSearchPathDomainMask.UserDomainMask,
@@ -82,14 +82,14 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// A file location for an application's temporary directory.
     ///
-    class func temporaryDirectory() -> String {
+    public class func temporaryDirectory() -> String {
         return NSTemporaryDirectory()
     }
     
     ///
     /// A file location for serializing an application's user object to disk.
     ///
-    class func userFile() -> String {
+    public class func userFile() -> String {
         return self.documentsDirectory().stringByAppendingPathComponent("User")
     }
     
@@ -101,7 +101,7 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// :returns: BOOL Whether or not th file was created.
     ///
-    class func createFileAtPath(fileData: NSData, atPath path: String) -> SFFailable {
+    public class func createFileAtPath(fileData: NSData, atPath path: String) -> SFFailable {
         let fileManager: NSFileManager = NSFileManager.defaultManager()
         let res = fileManager.createFileAtPath(path, contents: fileData, attributes: nil)
         if !res {
@@ -123,7 +123,7 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// :returns: BOOL Whether or not the file was deleted.
     ///
-    class func removeFileAtPath(path: String) -> SFFailable {
+    public class func removeFileAtPath(path: String) -> SFFailable {
         var error: NSError? = nil
         let fileManager: NSFileManager = NSFileManager.defaultManager()
         let res = fileManager.removeItemAtPath(path, error: &error)
@@ -144,7 +144,7 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// :returns: Returns the content of the file at path as a string
     ///
-    class func contentOfFileAtPath(path: String) -> String {
+    public class func contentOfFileAtPath(path: String) -> String {
         return NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
     }
     
@@ -156,7 +156,7 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// :param: directoryName The name of the directory to create.
     ///
-    class func createDirectoryInDocumentsDirectory(directoryName: String) {
+    public class func createDirectoryInDocumentsDirectory(directoryName: String) {
         let documentsDirectory = self.documentsDirectory() // Get documents folder
         let dataPath = documentsDirectory.stringByAppendingPathComponent(directoryName)
         var error: NSError? = nil
