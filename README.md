@@ -1,7 +1,7 @@
 # SFCore [![CI Status](https://travis-ci.org/Vaseltior/SFCore.svg?branch=master)](https://travis-ci.org/Vaseltior/SFCore.svg?branch=master)
 
 The core framework based on different sub-frameworks. 
-The main goal of this framework is the following. Since I'm developping *iOS* applications since 2008, I'm a bit used to a set a common methods, helper classes, etc...
+The main goal of this framework is the following. I'm a bit used to a set a common methods, helper classes, etc...
 
 I wanted to get them in a common place which is easily reusable.
 

@@ -1,0 +1,10 @@
+framework module SFErrors {
+  umbrella header "SFErrors.h"
+
+  export *
+  module * { export * }
+}
+
+module SFErrors.Swift {
+    header "SFErrors-Swift.h"
+}
