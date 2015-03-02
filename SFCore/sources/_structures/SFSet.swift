@@ -31,7 +31,7 @@
 
 import Foundation
 
-struct SFSet<T: Hashable> {
+public struct SFSet<T: Hashable> {
     typealias Index = T
     private var dictionary: [T: Bool] = [:]
     
@@ -62,7 +62,7 @@ struct SFSet<T: Hashable> {
 }
 
 extension SFSet: ArrayLiteralConvertible {
-    internal init(arrayLiteral elements: T...) {
+    public init(arrayLiteral elements: T...) {
         for element in elements {
             put(element)
         }

@@ -31,7 +31,7 @@
 
 import Foundation
 
-class SFQNode<T> {
+public class SFQNode<T> {
     var key: T? = nil
     var next: SFQNode? = nil
 }
