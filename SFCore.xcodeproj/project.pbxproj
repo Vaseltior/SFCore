@@ -25,6 +25,7 @@
 		F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59C1AA3E8EA0037657D /* SFQueue.swift */; };
 		F55DE5A21AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
 		F55DE5A31AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
+		F55DE5A61AA3F02A0037657D /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55DE5A61AA3F02A0037657D /* SFErrors.framework in Frameworks */,
 				F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
