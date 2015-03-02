@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>50E4AEC7-31CE-423B-9A60-5F98879A87CD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SFCore</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EDA2E0335C0E0EF19D58758FBD41919DC5D36FB3</key>
+		<string>https://github.com/Vaseltior/SFCore.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SFCore.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EDA2E0335C0E0EF19D58758FBD41919DC5D36FB3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Vaseltior/SFCore.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EDA2E0335C0E0EF19D58758FBD41919DC5D36FB3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EDA2E0335C0E0EF19D58758FBD41919DC5D36FB3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SFCore</string>
+		</dict>
+	</array>
+</dict>
+</plist>

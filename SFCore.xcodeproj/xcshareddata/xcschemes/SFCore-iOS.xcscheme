@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F55DE5241AA351D10037657D"
-               BuildableName = "SFCore.framework"
-               BlueprintName = "SFCore"
+               BlueprintIdentifier = "F55DE5761AA3D80D0037657D"
+               BuildableName = "libSFCore-iOS.a"
+               BlueprintName = "SFCore-iOS"
                ReferencedContainer = "container:SFCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F55DE52F1AA351D20037657D"
-               BuildableName = "SFCoreTests.xctest"
-               BlueprintName = "SFCoreTests"
+               BlueprintIdentifier = "F55DE5801AA3D80D0037657D"
+               BuildableName = "SFCore-iOSTests.xctest"
+               BlueprintName = "SFCore-iOSTests"
                ReferencedContainer = "container:SFCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F55DE52F1AA351D20037657D"
-               BuildableName = "SFCoreTests.xctest"
-               BlueprintName = "SFCoreTests"
+               BlueprintIdentifier = "F55DE5801AA3D80D0037657D"
+               BuildableName = "SFCore-iOSTests.xctest"
+               BlueprintName = "SFCore-iOSTests"
                ReferencedContainer = "container:SFCore.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F55DE5241AA351D10037657D"
-            BuildableName = "SFCore.framework"
-            BlueprintName = "SFCore"
+            BlueprintIdentifier = "F55DE5761AA3D80D0037657D"
+            BuildableName = "libSFCore-iOS.a"
+            BlueprintName = "SFCore-iOS"
             ReferencedContainer = "container:SFCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F55DE5241AA351D10037657D"
-            BuildableName = "SFCore.framework"
-            BlueprintName = "SFCore"
+            BlueprintIdentifier = "F55DE5761AA3D80D0037657D"
+            BuildableName = "libSFCore-iOS.a"
+            BlueprintName = "SFCore-iOS"
             ReferencedContainer = "container:SFCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F55DE5241AA351D10037657D"
-            BuildableName = "SFCore.framework"
-            BlueprintName = "SFCore"
+            BlueprintIdentifier = "F55DE5761AA3D80D0037657D"
+            BuildableName = "libSFCore-iOS.a"
+            BlueprintName = "SFCore-iOS"
             ReferencedContainer = "container:SFCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

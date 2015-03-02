@@ -25,12 +25,18 @@
 		F55DE57C1AA3D80D0037657D /* SFCore_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = F55DE57B1AA3D80D0037657D /* SFCore_iOS.m */; };
 		F55DE5821AA3D80D0037657D /* libSFCore-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5771AA3D80D0037657D /* libSFCore-iOS.a */; };
 		F55DE58E1AA3D8A90037657D /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
-		F55DE5951AA3DBBF0037657D /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
-		F55DE5961AA3DBC00037657D /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
 		F55DE5971AA3DED10037657D /* SFFileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5511AA3D57F0037657D /* SFFileManagerProtocol.swift */; };
 		F55DE5981AA3DED20037657D /* SFFileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5511AA3D57F0037657D /* SFFileManagerProtocol.swift */; };
 		F55DE5991AA3DED70037657D /* SFFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5501AA3D57F0037657D /* SFFileManager.swift */; };
 		F55DE59A1AA3DED80037657D /* SFFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5501AA3D57F0037657D /* SFFileManager.swift */; };
+		F55DE59E1AA3E8EA0037657D /* SFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59C1AA3E8EA0037657D /* SFQueue.swift */; };
+		F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59C1AA3E8EA0037657D /* SFQueue.swift */; };
+		F55DE5A01AA3E8EA0037657D /* SFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59C1AA3E8EA0037657D /* SFQueue.swift */; };
+		F55DE5A11AA3E8EA0037657D /* SFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59C1AA3E8EA0037657D /* SFQueue.swift */; };
+		F55DE5A21AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
+		F55DE5A31AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
+		F55DE5A41AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
+		F55DE5A51AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,8 @@
 		F55DE57B1AA3D80D0037657D /* SFCore_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFCore_iOS.m; sourceTree = "<group>"; };
 		F55DE5811AA3D80D0037657D /* SFCore-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SFCore-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55DE5871AA3D80D0037657D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55DE59C1AA3E8EA0037657D /* SFQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFQueue.swift; sourceTree = "<group>"; };
+		F55DE59D1AA3E8EA0037657D /* SFSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55DE5951AA3DBBF0037657D /* SFErrors.framework in Frameworks */,
 				F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55DE5961AA3DBC00037657D /* SFErrors.framework in Frameworks */,
 				F55DE5821AA3D80D0037657D /* libSFCore-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +188,7 @@
 		F55DE5441AA3D2060037657D /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				F55DE59B1AA3E8EA0037657D /* _structures */,
 				F55DE54F1AA3D57F0037657D /* _files */,
 				F55DE5451AA3D2060037657D /* _extensions */,
 			);
@@ -230,6 +237,15 @@
 				F55DE5871AA3D80D0037657D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F55DE59B1AA3E8EA0037657D /* _structures */ = {
+			isa = PBXGroup;
+			children = (
+				F55DE59C1AA3E8EA0037657D /* SFQueue.swift */,
+				F55DE59D1AA3E8EA0037657D /* SFSet.swift */,
+			);
+			path = _structures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,7 +441,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55DE54A1AA3D2060037657D /* SFBlocks.swift in Sources */,
+				F55DE5A21AA3E8EA0037657D /* SFSet.swift in Sources */,
 				F55DE5481AA3D2060037657D /* Array+SG.swift in Sources */,
+				F55DE59E1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5521AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F55DE5541AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
 				F55DE54D1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
@@ -437,6 +455,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55DE5531AA3D57F0037657D /* SFFileManager.swift in Sources */,
+				F55DE5A31AA3E8EA0037657D /* SFSet.swift in Sources */,
+				F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
 				F55DE54B1AA3D2060037657D /* SFBlocks.swift in Sources */,
 				F55DE5491AA3D2060037657D /* Array+SG.swift in Sources */,
@@ -449,6 +469,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55DE5A41AA3E8EA0037657D /* SFSet.swift in Sources */,
+				F55DE5A01AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5991AA3DED70037657D /* SFFileManager.swift in Sources */,
 				F55DE5971AA3DED10037657D /* SFFileManagerProtocol.swift in Sources */,
 				F55DE57C1AA3D80D0037657D /* SFCore_iOS.m in Sources */,
@@ -460,7 +482,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55DE59A1AA3DED80037657D /* SFFileManager.swift in Sources */,
+				F55DE5A51AA3E8EA0037657D /* SFSet.swift in Sources */,
 				F55DE5981AA3DED20037657D /* SFFileManagerProtocol.swift in Sources */,
+				F55DE5A11AA3E8EA0037657D /* SFQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +662,7 @@
 		F55DE5891AA3D80D0037657D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -655,6 +680,7 @@
 		F55DE58A1AA3D80D0037657D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
