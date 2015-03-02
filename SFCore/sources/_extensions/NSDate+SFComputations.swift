@@ -78,3 +78,4 @@ public func <(lhs: NSDate, rhs: NSDate) -> Bool {
 public func >(lhs: NSDate, rhs: NSDate) -> Bool {
     return lhs.compare(rhs) == .OrderedDescending
 }
+
