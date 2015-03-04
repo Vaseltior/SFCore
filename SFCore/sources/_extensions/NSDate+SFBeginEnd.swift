@@ -62,15 +62,18 @@ public extension NSDate {
     /// MARK: Calculate Beginning / End of Week
     
     
-    public func sfBeginningOfWeek() -> NSDate? {
-        let calendar = NSCalendar.currentCalendar()
-        let components: NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitYear|NSCalendarUnit.CalendarUnitMonth|NSCalendarUnit.CalendarUnitWeekday|NSCalendarUnit.CalendarUnitDay,
+    public func sfBeginningOfWeek(calendar: NSCalendar = NSCalendar.currentCalendar()) -> NSDate? {
+        let componentsCurrentDate = calendar.components(
+            NSCalendarUnit.YearCalendarUnit|NSCalendarUnit.MonthCalendarUnit|NSCalendarUnit.DayCalendarUnit|NSCalendarUnit.WeekdayCalendarUnit|NSCalendarUnit.WeekOfMonthCalendarUnit,
             fromDate: self
         )
-        let offset = (components.weekday == calendar.firstWeekday) ? 6 : (components.weekday-2)
-        components.day -= offset
-        return calendar.dateFromComponents(components)
+        let componentsNewDate = NSDateComponents()
+        componentsNewDate.year = componentsCurrentDate.year
+        componentsNewDate.month = componentsCurrentDate.month
+        componentsNewDate.weekOfMonth = componentsCurrentDate.weekOfMonth
+        componentsNewDate.weekday = calendar.firstWeekday
+        
+        return calendar.dateFromComponents(componentsNewDate)!
     }
     
     public func sfEndOfWeek() -> NSDate? {
