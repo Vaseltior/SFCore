@@ -9,6 +9,6 @@
 import Foundation
 import SFErrors
 
-typealias SFVoidCompletionBlock = (Void) -> (Void)
-typealias SFModelCompletionBlock = (SFErrors.SFFailable) -> (Void)
-typealias SFModelDataCompletionBlock = (SFErrors.SFFailable, AnyObject?) -> (Void)
+public typealias SFVoidCompletionBlock = (Void) -> (Void)
+public typealias SFModelCompletionBlock = (SFErrors.SFFailable) -> (Void)
+public typealias SFModelDataCompletionBlock = (SFErrors.SFFailable, AnyObject?) -> (Void)
