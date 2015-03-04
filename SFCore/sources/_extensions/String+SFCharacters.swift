@@ -31,7 +31,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     
     ///
     /// Returns the representation of the character at position `i`
@@ -41,7 +41,7 @@ extension String {
     ///
     /// :returns: The string describing the character at index `i`.
     ///
-    func getCharacter(i: Int) -> Character {
+    public func getCharacter(i: Int) -> Character {
         return self[advance(self.startIndex, i)]
     }
     
@@ -53,7 +53,7 @@ extension String {
     ///
     /// :returns: The string describing the character at index `i`.
     ///
-    subscript (i: Int) -> String {
+    public subscript (i: Int) -> String {
         return String(self.getCharacter(i) as Character)
     }
 }

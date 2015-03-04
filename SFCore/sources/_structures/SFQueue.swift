@@ -40,7 +40,7 @@ public class SFQueue<T> {
     private var top: SFQNode<T>! = SFQNode<T>()
 
     //enqueue the specified object
-    func enQueue(var key: T) {
+    public func enQueue(var key: T) {
         
         //check for the instance
         if (top == nil) {
@@ -66,7 +66,7 @@ public class SFQueue<T> {
     }
     
     //retrieve items from the top level in O(1) constant time</span>
-    func deQueue() -> T? {
+    public func deQueue() -> T? {
         
         //determine if the key or instance exists</span>
         let topitem: T? = self.top?.key
@@ -90,7 +90,7 @@ public class SFQueue<T> {
     }
     
     //check for the presence of a value</span>
-    func isEmpty() -> Bool {
+    public func isEmpty() -> Bool {
         
         //determine if the key or instance exist</span>
         if let topitem: T = self.top?.key {
@@ -105,7 +105,7 @@ public class SFQueue<T> {
     
     
     //retrieve the top most item</span>
-    func peek() -> T? {
+    public func peek() -> T? {
         return top.key!
     }
 }

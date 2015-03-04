@@ -35,23 +35,23 @@ public struct SFSet<T: Hashable> {
     typealias Index = T
     private var dictionary: [T: Bool] = [:]
     
-    var count: Int {
+    public var count: Int {
         return self.dictionary.count
     }
     
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         return self.dictionary.isEmpty
     }
     
-    func contains(element: T) -> Bool {
+    public func contains(element: T) -> Bool {
         return self.dictionary[element] ?? false
     }
     
-    mutating func put(element: T) {
+    public mutating func put(element: T) {
         self.dictionary[element] = true
     }
     
-    mutating func remove(element: T) -> Bool {
+    public mutating func remove(element: T) -> Bool {
         if self.contains(element) {
             self.dictionary.removeValueForKey(element)
             return true
