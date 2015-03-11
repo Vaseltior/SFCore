@@ -30,12 +30,12 @@
 		F55DE5AA1AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5A81AA3FBD00037657D /* NSDate+SFComputations.swift */; };
 		F55DE5AC1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */; };
 		F55DE5AD1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */; };
-		F55DE5AF1AA402A50037657D /* Snap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5AE1AA402A50037657D /* Snap.framework */; };
-		F55DE5B01AA402B10037657D /* Snap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5AE1AA402A50037657D /* Snap.framework */; };
 		F55DE5B21AA448940037657D /* Int+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B11AA448940037657D /* Int+SFBoundi.swift */; };
 		F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B11AA448940037657D /* Int+SFBoundi.swift */; };
 		F55DE5B51AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
 		F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
+		F5EA8BCE1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */; };
+		F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +65,10 @@
 		F55DE59D1AA3E8EA0037657D /* SFSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSet.swift; sourceTree = "<group>"; };
 		F55DE5A81AA3FBD00037657D /* NSDate+SFComputations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFComputations.swift"; sourceTree = "<group>"; };
 		F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFBeginEnd.swift"; sourceTree = "<group>"; };
-		F55DE5AE1AA402A50037657D /* Snap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Snap.framework; path = Carthage/Build/iOS/Snap.framework; sourceTree = "<group>"; };
 		F55DE5B11AA448940037657D /* Int+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+SFBoundi.swift"; sourceTree = "<group>"; };
 		F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt+SFBoundi.swift"; sourceTree = "<group>"; };
+		F5EA8BCA1AB0A755002796D8 /* SFAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFAssociation.swift; sourceTree = "<group>"; };
+		F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SFOrientation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55DE5721AA3D7C80037657D /* SFErrors.framework in Frameworks */,
-				F55DE5AF1AA402A50037657D /* Snap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,6 @@
 			files = (
 				F55DE5A61AA3F02A0037657D /* SFErrors.framework in Frameworks */,
 				F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */,
-				F55DE5B01AA402B10037657D /* Snap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +95,6 @@
 		F55DE51B1AA351D10037657D = {
 			isa = PBXGroup;
 			children = (
-				F55DE5AE1AA402A50037657D /* Snap.framework */,
 				F55DE5711AA3D7C80037657D /* SFErrors.framework */,
 				F55DE5271AA351D10037657D /* SFCore */,
 				F55DE5341AA351D20037657D /* SFCoreTests */,
@@ -151,6 +149,7 @@
 		F55DE5441AA3D2060037657D /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				F5EA8BC91AB0A745002796D8 /* _association */,
 				F55DE59B1AA3E8EA0037657D /* _structures */,
 				F55DE54F1AA3D57F0037657D /* _files */,
 				F55DE5451AA3D2060037657D /* _extensions */,
@@ -161,6 +160,7 @@
 		F55DE5451AA3D2060037657D /* _extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */,
 				F55DE5461AA3D2060037657D /* Array+SG.swift */,
 				F55DE5471AA3D2060037657D /* SFBlocks.swift */,
 				F55DE54C1AA3D47B0037657D /* String+SFCharacters.swift */,
@@ -188,6 +188,14 @@
 				F55DE59D1AA3E8EA0037657D /* SFSet.swift */,
 			);
 			path = _structures;
+			sourceTree = "<group>";
+		};
+		F5EA8BC91AB0A745002796D8 /* _association */ = {
+			isa = PBXGroup;
+			children = (
+				F5EA8BCA1AB0A755002796D8 /* SFAssociation.swift */,
+			);
+			path = _association;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +307,7 @@
 			files = (
 				F55DE54A1AA3D2060037657D /* SFBlocks.swift in Sources */,
 				F55DE5A21AA3E8EA0037657D /* SFSet.swift in Sources */,
+				F5EA8BCE1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */,
 				F55DE5AC1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
 				F55DE5B21AA448940037657D /* Int+SFBoundi.swift in Sources */,
 				F55DE5481AA3D2060037657D /* Array+SG.swift in Sources */,
@@ -321,6 +330,7 @@
 				F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */,
 				F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */,
 				F55DE5AA1AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
+				F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */,
 				F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
 				F55DE54B1AA3D2060037657D /* SFBlocks.swift in Sources */,
