@@ -20,12 +20,10 @@
 		F55DE5531AA3D57F0037657D /* SFFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5501AA3D57F0037657D /* SFFileManager.swift */; };
 		F55DE5541AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5511AA3D57F0037657D /* SFFileManagerProtocol.swift */; };
 		F55DE5551AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5511AA3D57F0037657D /* SFFileManagerProtocol.swift */; };
-		F55DE5721AA3D7C80037657D /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
 		F55DE59E1AA3E8EA0037657D /* SFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59C1AA3E8EA0037657D /* SFQueue.swift */; };
 		F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59C1AA3E8EA0037657D /* SFQueue.swift */; };
 		F55DE5A21AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
 		F55DE5A31AA3E8EA0037657D /* SFSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE59D1AA3E8EA0037657D /* SFSet.swift */; };
-		F55DE5A61AA3F02A0037657D /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
 		F55DE5A91AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5A81AA3FBD00037657D /* NSDate+SFComputations.swift */; };
 		F55DE5AA1AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5A81AA3FBD00037657D /* NSDate+SFComputations.swift */; };
 		F55DE5AC1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */; };
@@ -76,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55DE5721AA3D7C80037657D /* SFErrors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55DE5A61AA3F02A0037657D /* SFErrors.framework in Frameworks */,
 				F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
