@@ -1,4 +1,4 @@
-# SFCore [![CI Status](https://travis-ci.org/Vaseltior/SFCore.svg?branch=master)](https://travis-ci.org/Vaseltior/SFCore.svg?branch=master)
+# SFCore [![CI Status](https://travis-ci.org/Vaseltior/SFCore.svg?branch=master)](https://travis-ci.org/Vaseltior/SFCore.svg?branch=master) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 The core framework based on different sub-frameworks. 
 The main goal of this framework is the following. I'm a bit used to a set a common methods, helper classes, etc...
