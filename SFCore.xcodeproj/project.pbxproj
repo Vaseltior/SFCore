@@ -212,7 +212,6 @@
 				F55DE5211AA351D10037657D /* Frameworks */,
 				F55DE5221AA351D10037657D /* Headers */,
 				F55DE5231AA351D10037657D /* Resources */,
-				F55DE5431AA3559D0037657D /* Carthage copy script */,
 			);
 			buildRules = (
 			);
@@ -292,25 +291,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F55DE5431AA3559D0037657D /* Carthage copy script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SFErrors.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Snap.framework",
-			);
-			name = "Carthage copy script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ ! -f /usr/local/bin/carthage ]; then\n    echo \"File not found!\"\nelse\n    /usr/local/bin/carthage copy-frameworks\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F55DE5201AA351D10037657D /* Sources */ = {
