@@ -34,6 +34,8 @@
 		F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
 		F5EA8BCE1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */; };
 		F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */; };
+		F5EDF04D1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */; };
+		F5EDF04E1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt+SFBoundi.swift"; sourceTree = "<group>"; };
 		F5EA8BCA1AB0A755002796D8 /* SFAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFAssociation.swift; sourceTree = "<group>"; };
 		F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SFOrientation.swift"; sourceTree = "<group>"; };
+		F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SFRGB.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,7 @@
 				F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */,
 				F55DE5B11AA448940037657D /* Int+SFBoundi.swift */,
 				F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */,
+				F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */,
 			);
 			path = _extensions;
 			sourceTree = "<group>";
@@ -312,6 +316,7 @@
 				F55DE5521AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F55DE5541AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
 				F55DE54D1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
+				F5EDF04D1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */,
 				F55DE5A91AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5EDF04E1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */,
 				F55DE5531AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F55DE5AD1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
 				F55DE5A31AA3E8EA0037657D /* SFSet.swift in Sources */,
