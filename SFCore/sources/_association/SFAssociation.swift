@@ -32,8 +32,7 @@
 import Foundation
 
 
-public
-class ObjectAssociationWrapper : NSObject {
+public class ObjectAssociationWrapper : NSObject {
     let value: AnyObject
     
     init(value: AnyObject) {
@@ -41,11 +40,9 @@ class ObjectAssociationWrapper : NSObject {
     }
 }
 
-public
-extension NSObject {
+public extension NSObject {
     
-    public
-    var swiftAssociatedObject : AnyObject! {
+    public var swiftAssociatedObject : AnyObject! {
         get {
             let wrapper = objc_getAssociatedObject(self, someKey) as SFCore.ObjectAssociationWrapper?
             return wrapper?.value
