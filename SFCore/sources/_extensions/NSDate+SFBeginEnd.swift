@@ -64,7 +64,7 @@ public extension NSDate {
     
     public func sfBeginningOfWeek(calendar: NSCalendar = NSCalendar.currentCalendar()) -> NSDate? {
         let componentsCurrentDate = calendar.components(
-            NSCalendarUnit.YearCalendarUnit|NSCalendarUnit.MonthCalendarUnit|NSCalendarUnit.DayCalendarUnit|NSCalendarUnit.WeekdayCalendarUnit|NSCalendarUnit.WeekOfMonthCalendarUnit,
+            .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitWeekday | .CalendarUnitWeekOfMonth,
             fromDate: self
         )
         let componentsNewDate = NSDateComponents()

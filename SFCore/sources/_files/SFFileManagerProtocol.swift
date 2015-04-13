@@ -39,27 +39,27 @@ public protocol SFFileManagerProtocol {
     ///
     /// A file location for an application's main bundle.
     ///
-    class func mainBundleDirectory() -> String?
+    static func mainBundleDirectory() -> String?
     
     ///
     /// A file location for an application's caches directory.
     ///
-    class func cachesDirectory() -> String
+    static func cachesDirectory() -> String
     
     ///
     /// A file location for an application's documents directory.
     ///
-    class func documentsDirectory() -> String
+    static func documentsDirectory() -> String
     
     ///
     /// A file location for an application's temporary directory.
     ///
-    class func temporaryDirectory() -> String
+    static func temporaryDirectory() -> String
     
     ///
     /// A file location for serializing an application's user object to disk.
     ///
-    class func userFile() -> String
+    static func userFile() -> String
     
     ///
     /// A file location for an application's main bundle
@@ -69,7 +69,7 @@ public protocol SFFileManagerProtocol {
     ///
     /// :returns: BOOL Whether or not th file was created.
     ///
-    class func createFileAtPath(fileData: NSData, atPath path: String) -> SFFailable
+    static func createFileAtPath(fileData: NSData, atPath path: String) -> SFFailable
     
     ///
     /// A file location for an application's main bundle
@@ -78,14 +78,14 @@ public protocol SFFileManagerProtocol {
     ///
     /// :returns: BOOL Whether or not the file was deleted.
     ///
-    class func removeFileAtPath(path: String) -> SFFailable
+    static func removeFileAtPath(path: String) -> SFFailable
     
     ///
     /// Returns the content of the file at path as a string
     ///
     /// :returns: Returns the content of the file at path as a string
     ///
-    class func contentOfFileAtPath(path: String) -> String
+    static func contentOfFileAtPath(path: String) -> String
     
     /// MARK: - High Level -
 
@@ -95,5 +95,5 @@ public protocol SFFileManagerProtocol {
     ///
     /// :param: directoryName The name of the directory to create.
     ///
-    class func createDirectoryInDocumentsDirectory(directoryName: String)
+    static func createDirectoryInDocumentsDirectory(directoryName: String)
 }

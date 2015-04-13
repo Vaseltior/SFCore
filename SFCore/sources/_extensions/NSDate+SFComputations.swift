@@ -52,7 +52,7 @@ public extension NSDate {
     ///
     public class func sfNumberOfDaysBetween(startDate: NSDate, endDate: NSDate) -> Int {
         precondition(startDate <= endDate, "startDate should be less than endDate")
-        let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier:NSGregorianCalendar)!
+        let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier:NSCalendarIdentifierGregorian)!
         let components: NSDateComponents = gregorianCalendar.components(
             NSCalendarUnit.CalendarUnitDay,
             fromDate: startDate,

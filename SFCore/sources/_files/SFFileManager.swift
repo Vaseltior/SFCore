@@ -59,7 +59,7 @@ public class SFFileManager : SFFileManagerProtocol {
             return ""
         }
         
-        return String(format: paths[0] as NSString)
+        return String(format: (paths[0] as! NSString) as NSString as String)
     }
     
     ///
@@ -76,7 +76,7 @@ public class SFFileManager : SFFileManagerProtocol {
             return ""
         }
         
-        return String(format: paths[0] as NSString)
+        return String(format: (paths[0] as! NSString) as NSString as String)
     }
     
     ///
@@ -145,7 +145,7 @@ public class SFFileManager : SFFileManagerProtocol {
     /// :returns: Returns the content of the file at path as a string
     ///
     public class func contentOfFileAtPath(path: String) -> String {
-        return NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
+        return NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)! as String
     }
     
     /// MARK: High Level function -
