@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SFErrors-Swift.h</key>
 		<data>
-		paV1FEkRlvlr8nd//UrT494Rqt0=
+		5rKbju6NYpoOkx95zLvq4dg8gTw=
 		</data>
 		<key>Headers/SFErrors.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		J3XWaEuMaLZ2W1tOB5ySSI0yawM=
+		vmDY3zc898HUSeb5vaurt2qyBT4=
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm.swiftdoc</key>
 		<data>
-		bixL/51h5EnkWjMqnwkjtYoWVzE=
+		H/nZyq4+edfE7UMCEvNeR+P402E=
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm.swiftmodule</key>
 		<data>
-		fu2im4wXWe5oHYWkrwsfMh4rbi0=
+		CP7w9fVswof/x7xBNXPnhuk/HHo=
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		cSw5V/dI1MLkdNG3e3Yl0uD3hUY=
+		BzE6qxhH1vatJ0UbnGMs09168Hk=
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		TS9RpnDSpXQSVO8mpuEYUJ+vbas=
+		px+a1v2q6XzPx7hvCrb9pwMdb1I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -41,7 +41,7 @@
 	<dict>
 		<key>Headers/SFErrors-Swift.h</key>
 		<data>
-		paV1FEkRlvlr8nd//UrT494Rqt0=
+		5rKbju6NYpoOkx95zLvq4dg8gTw=
 		</data>
 		<key>Headers/SFErrors.h</key>
 		<data>
@@ -49,19 +49,19 @@
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm.swiftdoc</key>
 		<data>
-		bixL/51h5EnkWjMqnwkjtYoWVzE=
+		H/nZyq4+edfE7UMCEvNeR+P402E=
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm.swiftmodule</key>
 		<data>
-		fu2im4wXWe5oHYWkrwsfMh4rbi0=
+		CP7w9fVswof/x7xBNXPnhuk/HHo=
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		cSw5V/dI1MLkdNG3e3Yl0uD3hUY=
+		BzE6qxhH1vatJ0UbnGMs09168Hk=
 		</data>
 		<key>Modules/SFErrors.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		TS9RpnDSpXQSVO8mpuEYUJ+vbas=
+		px+a1v2q6XzPx7hvCrb9pwMdb1I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

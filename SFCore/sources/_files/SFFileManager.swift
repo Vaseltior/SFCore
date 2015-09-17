@@ -90,16 +90,16 @@ public class SFFileManager : SFFileManagerProtocol {
     /// A file location for serializing an application's user object to disk.
     ///
     public class func userFile() -> String {
-        return self.documentsDirectory().stringByAppendingPathComponent("User")
+        return self.documentsDirectory() + "/" + "User"
     }
     
     ///
     /// A file location for an application's main bundle
     ///
-    /// :param: fileData The data to write to a file.
-    /// :param: path The path to write the data to.
+    /// - parameter fileData: The data to write to a file.
+    /// - parameter path: The path to write the data to.
     ///
-    /// :returns: BOOL Whether or not th file was created.
+    /// - returns: BOOL Whether or not th file was created.
     ///
     public class func createFileAtPath(fileData: NSData, atPath path: String) -> SFFailable {
         let fileManager: NSFileManager = NSFileManager.defaultManager()
@@ -119,14 +119,18 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// A file location for an application's main bundle
     ///
-    /// :param: path The path to remove the file from.
+    /// - parameter path: The path to remove the file from.
     ///
-    /// :returns: BOOL Whether or not the file was deleted.
+    /// - returns: BOOL Whether or not the file was deleted.
     ///
     public class func removeFileAtPath(path: String) -> SFFailable {
         var error: NSError? = nil
         let fileManager: NSFileManager = NSFileManager.defaultManager()
-        let res = fileManager.removeItemAtPath(path, error: &error)
+        do {
+            try fileManager.removeItemAtPath(path)
+        } catch let error1 as NSError {
+            error = error1
+        }
         if let theError = error {
             return SFFailable.Failure(
                 SFError(
@@ -142,10 +146,10 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// Returns the content of the file at path as a string
     ///
-    /// :returns: Returns the content of the file at path as a string
+    /// - returns: Returns the content of the file at path as a string
     ///
     public class func contentOfFileAtPath(path: String) -> String {
-        return NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)! as String
+        return (try! NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)) as String
     }
     
     /// MARK: High Level function -
@@ -154,21 +158,22 @@ public class SFFileManager : SFFileManagerProtocol {
     ///
     /// Creates a directory in the documents directory
     ///
-    /// :param: directoryName The name of the directory to create.
+    /// - parameter directoryName: The name of the directory to create.
     ///
     public class func createDirectoryInDocumentsDirectory(directoryName: String) {
         let documentsDirectory = self.documentsDirectory() // Get documents folder
-        let dataPath = documentsDirectory.stringByAppendingPathComponent(directoryName)
-        var error: NSError? = nil
+        let dataPath = documentsDirectory + "/" + directoryName
         let fileManager: NSFileManager = NSFileManager.defaultManager()
         
         if (!fileManager.fileExistsAtPath(dataPath)) {
-            fileManager.createDirectoryAtPath(
-                dataPath,
-                withIntermediateDirectories: true,
-                attributes: nil,
-                error: &error
-            )
+            do {
+                try fileManager.createDirectoryAtPath(
+                    dataPath,
+                    withIntermediateDirectories: true,
+                    attributes: nil)
+            } catch _ as NSError {
+                //error = error1
+            }
         }
     }
 }

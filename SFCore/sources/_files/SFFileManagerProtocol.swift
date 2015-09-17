@@ -64,26 +64,26 @@ public protocol SFFileManagerProtocol {
     ///
     /// A file location for an application's main bundle
     ///
-    /// :param: fileData The data to write to a file.
-    /// :param: path The path to write the data to.
+    /// - parameter fileData: The data to write to a file.
+    /// - parameter path: The path to write the data to.
     ///
-    /// :returns: BOOL Whether or not th file was created.
+    /// - returns: BOOL Whether or not th file was created.
     ///
     static func createFileAtPath(fileData: NSData, atPath path: String) -> SFFailable
     
     ///
     /// A file location for an application's main bundle
     ///
-    /// :param: path The path to remove the file from.
+    /// - parameter path: The path to remove the file from.
     ///
-    /// :returns: BOOL Whether or not the file was deleted.
+    /// - returns: BOOL Whether or not the file was deleted.
     ///
     static func removeFileAtPath(path: String) -> SFFailable
     
     ///
     /// Returns the content of the file at path as a string
     ///
-    /// :returns: Returns the content of the file at path as a string
+    /// - returns: Returns the content of the file at path as a string
     ///
     static func contentOfFileAtPath(path: String) -> String
     
@@ -93,7 +93,7 @@ public protocol SFFileManagerProtocol {
     ///
     /// Creates a directory in the documents directory
     ///
-    /// :param: directoryName The name of the directory to create.
+    /// - parameter directoryName: The name of the directory to create.
     ///
     static func createDirectoryInDocumentsDirectory(directoryName: String)
 }

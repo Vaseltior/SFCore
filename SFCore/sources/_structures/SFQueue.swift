@@ -40,7 +40,7 @@ public class SFQueue<T> {
     private var top: SFQNode<T>! = SFQNode<T>()
 
     //enqueue the specified object
-    public func enQueue(var key: T) {
+    public func enQueue(key: T) {
         
         //check for the instance
         if (top == nil) {
@@ -53,7 +53,7 @@ public class SFQueue<T> {
             return
         }
         
-        var childToUse: SFQNode<T> = SFQNode<T>()
+        let childToUse: SFQNode<T> = SFQNode<T>()
         var current: SFQNode = top
         
         //cycle through the list of items to get to the end.
@@ -76,7 +76,7 @@ public class SFQueue<T> {
         }
         
         //retrieve and queue the next item</span>
-        var queueitem: T? = top.key!
+        let queueitem: T? = top.key!
         
         //use optional binding</span>
         if let nextitem = top.next {
@@ -93,7 +93,7 @@ public class SFQueue<T> {
     public func isEmpty() -> Bool {
         
         //determine if the key or instance exist</span>
-        if let topitem: T = self.top?.key {
+        if let _: T = self.top?.key {
             return false
         }
             

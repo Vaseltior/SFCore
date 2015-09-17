@@ -39,7 +39,7 @@ public extension NSDate {
     public func sfBeginningOfDay() -> NSDate? {
         let calendar = NSCalendar.currentCalendar()
         let components: NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitYear|NSCalendarUnit.CalendarUnitMonth|NSCalendarUnit.CalendarUnitDay,
+            [NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day],
             fromDate: self
         )
         return calendar.dateFromComponents(components)
@@ -64,7 +64,7 @@ public extension NSDate {
     
     public func sfBeginningOfWeek(calendar: NSCalendar = NSCalendar.currentCalendar()) -> NSDate? {
         let componentsCurrentDate = calendar.components(
-            .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitWeekday | .CalendarUnitWeekOfMonth,
+            [.Year, .Month, .Day, .Weekday, .WeekOfMonth],
             fromDate: self
         )
         let componentsNewDate = NSDateComponents()
@@ -97,7 +97,7 @@ public extension NSDate {
     public func sfBeginningOfMonth() -> NSDate? {
         let calendar = NSCalendar.currentCalendar()
         let components: NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitYear|NSCalendarUnit.CalendarUnitMonth,
+            [NSCalendarUnit.Year, NSCalendarUnit.Month],
             fromDate: self
         )
         return calendar.dateFromComponents(components)
@@ -123,7 +123,7 @@ public extension NSDate {
     public func sfBeginningOfYear() -> NSDate? {
         let calendar = NSCalendar.currentCalendar()
         let components: NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitYear,
+            NSCalendarUnit.Year,
             fromDate: self
         )
         return calendar.dateFromComponents(components)
