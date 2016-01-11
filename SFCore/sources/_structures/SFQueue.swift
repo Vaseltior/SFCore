@@ -49,7 +49,7 @@ public class SFQueue<T> {
         
         //establish the top node
         if (top.key == nil) {
-            top.key = key;
+            top.key = key
             return
         }
         
@@ -61,8 +61,8 @@ public class SFQueue<T> {
             current = current.next!
         }
         //append a new item
-        childToUse.key = key;
-        current.next = childToUse;
+        childToUse.key = key
+        current.next = childToUse
     }
     
     //retrieve items from the top level in O(1) constant time</span>
@@ -81,8 +81,7 @@ public class SFQueue<T> {
         //use optional binding</span>
         if let nextitem = top.next {
             top = nextitem
-        }
-        else {
+        } else {
             top = nil
         }
         
@@ -95,9 +94,8 @@ public class SFQueue<T> {
         //determine if the key or instance exist</span>
         if let _: T = self.top?.key {
             return false
-        }
-            
-        else {
+
+        } else {
             return true
         }
         

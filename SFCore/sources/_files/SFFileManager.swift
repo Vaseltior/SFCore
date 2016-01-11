@@ -150,7 +150,13 @@ public class SFFileManager : SFFileManagerProtocol {
     /// - returns: Returns the content of the file at path as a string
     ///
     public class func contentOfFileAtPath(path: String) -> String {
-        return (try! NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)) as String
+      var res = ""
+      do {
+        res = try (NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)) as String
+      } catch _ {
+      }
+
+      return res
     }
     
     /// MARK: High Level function -

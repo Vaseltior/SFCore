@@ -32,50 +32,49 @@
 import Foundation
 
 public extension NSDate {
-    
-    ///
-    /// Returns the number of seconds in one year
-    ///
-    /// - returns: the number of of seconds in one year
-    ///
-    public class func sfYearInSeconds() -> NSTimeInterval {
-        return 365 * (60 * 60 * 24)
-    }
-    
-    ///
-    /// Returns the number of days between two dates
-    ///
-    /// - parameter startDate: The start date
-    /// - parameter endDate: The end date
-    ///
-    /// - returns: the number of days between two dates
-    ///
-    public class func sfNumberOfDaysBetween(startDate: NSDate, endDate: NSDate) -> Int {
-        precondition(startDate <= endDate, "startDate should be less than endDate")
-        let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier:NSCalendarIdentifierGregorian)!
-        let components: NSDateComponents = gregorianCalendar.components(
-            NSCalendarUnit.Day,
-            fromDate: startDate,
-            toDate: endDate,
-            options: NSCalendarOptions.MatchStrictly
-        )
-        return components.day
-    }
+
+  ///
+  /// Returns the number of seconds in one year
+  ///
+  /// - returns: the number of of seconds in one year
+  ///
+  public class func sfYearInSeconds() -> NSTimeInterval {
+    return 365 * (60 * 60 * 24)
+  }
+
+  ///
+  /// Returns the number of days between two dates
+  ///
+  /// - parameter startDate: The start date
+  /// - parameter endDate: The end date
+  ///
+  /// - returns: the number of days between two dates
+  ///
+  public class func sfNumberOfDaysBetween(startDate: NSDate, endDate: NSDate) -> Int {
+    precondition(startDate <= endDate, "startDate should be less than endDate")
+    let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier:NSCalendarIdentifierGregorian)!
+    let components: NSDateComponents = gregorianCalendar.components(
+      NSCalendarUnit.Day,
+      fromDate: startDate,
+      toDate: endDate,
+      options: NSCalendarOptions.MatchStrictly
+    )
+    return components.day
+  }
 }
 
 /// MARK: - Comparable -
 
 extension NSDate: Comparable {}
 
-public func ==(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs === rhs || lhs.compare(rhs) == .OrderedSame
+public func == (lhs: NSDate, rhs: NSDate) -> Bool {
+  return lhs === rhs || lhs.compare(rhs) == .OrderedSame
 }
 
-public func <(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedAscending
+public func < (lhs: NSDate, rhs: NSDate) -> Bool {
+  return lhs.compare(rhs) == .OrderedAscending
 }
 
-public func >(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedDescending
+public func > (lhs: NSDate, rhs: NSDate) -> Bool {
+  return lhs.compare(rhs) == .OrderedDescending
 }
-
