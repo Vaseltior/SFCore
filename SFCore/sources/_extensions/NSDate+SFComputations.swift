@@ -36,7 +36,7 @@ public extension NSDate {
     ///
     /// Returns the number of seconds in one year
     ///
-    /// :returns: the number of of seconds in one year
+    /// - returns: the number of of seconds in one year
     ///
     public class func sfYearInSeconds() -> NSTimeInterval {
         return 365 * (60 * 60 * 24)
@@ -45,16 +45,16 @@ public extension NSDate {
     ///
     /// Returns the number of days between two dates
     ///
-    /// :param: startDate The start date
-    /// :param: endDate The end date
+    /// - parameter startDate: The start date
+    /// - parameter endDate: The end date
     ///
-    /// :returns: the number of days between two dates
+    /// - returns: the number of days between two dates
     ///
     public class func sfNumberOfDaysBetween(startDate: NSDate, endDate: NSDate) -> Int {
         precondition(startDate <= endDate, "startDate should be less than endDate")
         let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier:NSCalendarIdentifierGregorian)!
         let components: NSDateComponents = gregorianCalendar.components(
-            NSCalendarUnit.CalendarUnitDay,
+            NSCalendarUnit.Day,
             fromDate: startDate,
             toDate: endDate,
             options: NSCalendarOptions.MatchStrictly
