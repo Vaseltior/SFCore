@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */; };
 		E1EC58D61C43AF3F00052CD0 /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
 		E1EC58D71C43AF4000052CD0 /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
 		F55DE52B1AA351D10037657D /* SFCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F55DE52A1AA351D10037657D /* SFCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SFCharactersTests.swift"; sourceTree = "<group>"; };
 		F55DE5251AA351D10037657D /* SFCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55DE5291AA351D10037657D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F55DE52A1AA351D10037657D /* SFCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFCore.h; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				F55DE5371AA351D20037657D /* SFCoreTests.swift */,
 				F55DE5351AA351D20037657D /* Supporting Files */,
+				E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				F55DE5AD1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
 				F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */,
 				F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */,
+				E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */,
 				F55DE5AA1AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
 				F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */,
 				F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */,

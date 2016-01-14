@@ -21,8 +21,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
-
-//
 //  SFCore : String+SFCharacters.swift
 //
 //  Created by Samuel Grau on 02/03/2015.
@@ -32,7 +30,6 @@
 import Foundation
 
 extension String {
-
   ///
   /// Returns the representation of the character at position `i`
   /// in the string
@@ -57,7 +54,20 @@ extension String {
     return String(self.getCharacter(i) as Character)
   }
 
+  ///
+  ///
+  ///
   public func characterString(i: Int) -> String {
     return self[i] //String(self.getCharacter(i) as Character)
+  }
+
+  public var capitalizeFirst: String {
+    var result = self
+    result.replaceRange(startIndex...startIndex, with: String(self[startIndex]).capitalizedString)
+    return result
+  }
+
+  public var trim: String {
+    return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
   }
 }
