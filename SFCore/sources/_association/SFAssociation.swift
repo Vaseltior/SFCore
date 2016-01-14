@@ -40,7 +40,7 @@ public class ObjectAssociationWrapper : NSObject {
     }
 }
 
-public extension NSObject {
+extension NSObject {
     
     public var swiftAssociatedObject : AnyObject! {
         get {

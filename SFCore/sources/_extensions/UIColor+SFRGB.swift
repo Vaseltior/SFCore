@@ -32,7 +32,7 @@
 import Foundation
 import UIKit
 
-public extension UIColor {
+extension UIColor {
     public class func sfRGB(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return self.sfRGBA(red, green: green, blue: blue, alpha: 1.0)
     }

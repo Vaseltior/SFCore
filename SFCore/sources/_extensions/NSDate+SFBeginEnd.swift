@@ -31,7 +31,7 @@
 
 import Foundation
 
-public extension NSDate {
+extension NSDate {
 
   /// MARK: Calculate Beginning / End of Day
 

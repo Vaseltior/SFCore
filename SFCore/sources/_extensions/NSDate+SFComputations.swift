@@ -31,7 +31,7 @@
 
 import Foundation
 
-public extension NSDate {
+extension NSDate {
 
   ///
   /// Returns the number of seconds in one year

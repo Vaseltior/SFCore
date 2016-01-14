@@ -31,7 +31,7 @@
 
 import Foundation
 
-public extension UInt {
+extension UInt {
     public static func boundi(value: UInt, min: UInt, max: UInt) -> UInt {
         var iMax = max
         if (max < min) {
