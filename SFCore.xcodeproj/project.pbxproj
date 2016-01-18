@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E109E2171C4D2FBA00074569 /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E109E2161C4D2FBA00074569 /* SFErrors.framework */; };
+		E109E2181C4D2FBE00074569 /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E109E2161C4D2FBA00074569 /* SFErrors.framework */; };
 		E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */; };
 		F55DE52B1AA351D10037657D /* SFCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F55DE52A1AA351D10037657D /* SFCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5251AA351D10037657D /* SFCore.framework */; };
@@ -48,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E109E2161C4D2FBA00074569 /* SFErrors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFErrors.framework; path = Carthage/Build/iOS/SFErrors.framework; sourceTree = "<group>"; };
 		E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SFCharactersTests.swift"; sourceTree = "<group>"; };
 		F55DE5251AA351D10037657D /* SFCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55DE5291AA351D10037657D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E109E2171C4D2FBA00074569 /* SFErrors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E109E2181C4D2FBE00074569 /* SFErrors.framework in Frameworks */,
 				F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +97,7 @@
 		F55DE51B1AA351D10037657D = {
 			isa = PBXGroup;
 			children = (
+				E109E2161C4D2FBA00074569 /* SFErrors.framework */,
 				F55DE5271AA351D10037657D /* SFCore */,
 				F55DE5341AA351D20037657D /* SFCoreTests */,
 				F55DE5261AA351D10037657D /* Products */,
@@ -213,10 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F55DE53B1AA351D20037657D /* Build configuration list for PBXNativeTarget "SFCore" */;
 			buildPhases = (
+				E109E2191C4D308E00074569 /* Carthage rebuild */,
 				F55DE5201AA351D10037657D /* Sources */,
 				F55DE5211AA351D10037657D /* Frameworks */,
 				F55DE5221AA351D10037657D /* Headers */,
 				F55DE5231AA351D10037657D /* Resources */,
+				E109E2141C4D2F6F00074569 /* Carthage copy */,
 				E1146E8F1C440A1D00E44262 /* SwiftLint */,
 			);
 			buildRules = (
@@ -300,6 +308,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E109E2141C4D2F6F00074569 /* Carthage copy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SFErrors.framework",
+			);
+			name = "Carthage copy";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -f /usr/local/bin/carthage ]; then\n    echo \"File not found!\"\nelse\n    /usr/local/bin/carthage copy-frameworks\nfi";
+		};
+		E109E2191C4D308E00074569 /* Carthage rebuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage rebuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage build --platform \"$PLATFORM_NAME\" \"$SRCROOT\"";
+		};
 		E1146E8F1C440A1D00E44262 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
