@@ -33,23 +33,23 @@ import Foundation
 
 
 public class ObjectAssociationWrapper : NSObject {
-    let value: AnyObject
-    
-    init(value: AnyObject) {
-        self.value = value
-    }
+  let value: AnyObject
+
+  init(value: AnyObject) {
+    self.value = value
+  }
 }
 
 extension NSObject {
-    
-    public var swiftAssociatedObject : AnyObject! {
-        get {
-            let wrapper = objc_getAssociatedObject(self, someKey) as SFCore.ObjectAssociationWrapper?
-            return wrapper?.value
-        }
-        set(value) {
-            let wrapper = SFCore.ObjectAssociationWrapper(value: value)
-            objc_setAssociatedObject(self, someKey, wrapper, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
-        }
+
+  public var swiftAssociatedObject : AnyObject! {
+    get {
+      let wrapper = objc_getAssociatedObject(self, someKey) as SFCore.ObjectAssociationWrapper?
+      return wrapper?.value
     }
+    set(value) {
+      let wrapper = SFCore.ObjectAssociationWrapper(value: value)
+      objc_setAssociatedObject(self, someKey, wrapper, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+    }
+  }
 }
