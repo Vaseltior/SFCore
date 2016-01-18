@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */; };
-		E1EC58D61C43AF3F00052CD0 /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
-		E1EC58D71C43AF4000052CD0 /* SFErrors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5711AA3D7C80037657D /* SFErrors.framework */; };
 		F55DE52B1AA351D10037657D /* SFCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F55DE52A1AA351D10037657D /* SFCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5251AA351D10037657D /* SFCore.framework */; };
 		F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5371AA351D20037657D /* SFCoreTests.swift */; };
@@ -62,7 +60,6 @@
 		F55DE54C1AA3D47B0037657D /* String+SFCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SFCharacters.swift"; sourceTree = "<group>"; };
 		F55DE5501AA3D57F0037657D /* SFFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFileManager.swift; sourceTree = "<group>"; };
 		F55DE5511AA3D57F0037657D /* SFFileManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFileManagerProtocol.swift; sourceTree = "<group>"; };
-		F55DE5711AA3D7C80037657D /* SFErrors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFErrors.framework; path = Carthage/Build/iOS/SFErrors.framework; sourceTree = "<group>"; };
 		F55DE59C1AA3E8EA0037657D /* SFQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFQueue.swift; sourceTree = "<group>"; };
 		F55DE5A81AA3FBD00037657D /* NSDate+SFComputations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFComputations.swift"; sourceTree = "<group>"; };
 		F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFBeginEnd.swift"; sourceTree = "<group>"; };
@@ -78,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1EC58D61C43AF3F00052CD0 /* SFErrors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1EC58D71C43AF4000052CD0 /* SFErrors.framework in Frameworks */,
 				F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,7 +92,6 @@
 		F55DE51B1AA351D10037657D = {
 			isa = PBXGroup;
 			children = (
-				F55DE5711AA3D7C80037657D /* SFErrors.framework */,
 				F55DE5271AA351D10037657D /* SFCore */,
 				F55DE5341AA351D20037657D /* SFCoreTests */,
 				F55DE5261AA351D10037657D /* Products */,

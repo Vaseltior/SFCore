@@ -38,8 +38,8 @@ extension String {
   ///
   /// - returns: The string describing the character at index `i`.
   ///
-  public func getCharacter(i: Int) -> Character {
-    return self[self.startIndex.advancedBy(i)]
+  public func getCharacter(index: Int) -> Character {
+    return self[self.startIndex.advancedBy(index)]
   }
 
   ///
@@ -50,15 +50,15 @@ extension String {
   ///
   /// - returns: The string describing the character at index `i`.
   ///
-  public subscript (i: Int) -> String {
-    return String(self.getCharacter(i) as Character)
+  public subscript (index: Int) -> String {
+    return String(self.getCharacter(index) as Character)
   }
 
   ///
   ///
   ///
-  public func characterString(i: Int) -> String {
-    return self[i] //String(self.getCharacter(i) as Character)
+  public func characterString(index: Int) -> String {
+    return self[index] //String(self.getCharacter(i) as Character)
   }
 
   public var capitalizeFirst: String {
