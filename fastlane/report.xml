@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="fastlane">
+  <testsuite name="run">
+    
+      
+      <testcase name="0: Verifying required fastlane version" time="0.000748">
+        
+      </testcase>
+    
+      
+      <testcase name="1: default_platform" time="0.000395">
+        
+      </testcase>
+    
+      
+      <testcase name="2: carthage" time="21.101449">
+        
+      </testcase>
+    
+      
+      <testcase name="3: increment_build_number" time="3.134074">
+        
+      </testcase>
+    
+      
+      <testcase name="4: scan" time="35.607847">
+        
+      </testcase>
+    
+      
+      <testcase name="5: xctool" time="21.899001">
+        
+      </testcase>
+    
+      
+      <testcase name="6: notification" time="0.561474">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

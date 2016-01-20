@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests='5' failures='0'>
+  <testsuite name='SFCoreTests.SFCoreTests' tests='2' failures='0'>
+    <testcase classname='SFCoreTests.SFCoreTests' name='testExample' time='0.224'/>
+    <testcase classname='SFCoreTests.SFCoreTests' name='testPerformanceExample' time='1.536'/>
+  </testsuite>
+  <testsuite name='SFCoreTests.StringSFCharactersTests' tests='3' failures='0'>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCapitalizeFirst' time='0.261'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCharacterGet' time='0.033'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testTrim' time='0.019'/>
+  </testsuite>
+</testsuites>

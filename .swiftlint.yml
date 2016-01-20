@@ -26,7 +26,7 @@ type_body_length:
   - 1000 # error
 function_body_length:
   - 70 # warning
-  - 140 # error
+  - 340 # error
 variable_name_min_length : 1
 variable_name_max_length : 120
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
