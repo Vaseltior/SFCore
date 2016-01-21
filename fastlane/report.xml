@@ -3,37 +3,27 @@
   <testsuite name="run">
     
       
-      <testcase name="0: Verifying required fastlane version" time="0.000748">
+      <testcase name="0: Verifying required fastlane version" time="0.000545">
         
       </testcase>
     
       
-      <testcase name="1: default_platform" time="0.000395">
+      <testcase name="1: default_platform" time="0.000346">
         
       </testcase>
     
       
-      <testcase name="2: carthage" time="21.101449">
+      <testcase name="2: increment_build_number" time="3.445614">
         
       </testcase>
     
       
-      <testcase name="3: increment_build_number" time="3.134074">
+      <testcase name="3: scan" time="21.505539">
         
       </testcase>
     
       
-      <testcase name="4: scan" time="35.607847">
-        
-      </testcase>
-    
-      
-      <testcase name="5: xctool" time="21.899001">
-        
-      </testcase>
-    
-      
-      <testcase name="6: notification" time="0.561474">
+      <testcase name="4: gcovr" time="1.039197">
         
       </testcase>
     

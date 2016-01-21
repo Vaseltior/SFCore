@@ -30,7 +30,6 @@
 //
 
 import Foundation
-import SFErrors
 
 ///
 /// A protocol for file manipulation
@@ -69,7 +68,7 @@ public protocol SFFileManagerProtocol {
     ///
     /// - returns: BOOL Whether or not th file was created.
     ///
-    static func createFileAtPath(fileData: NSData, atPath path: String) -> SFFailable
+    static func createFileAtPath(fileData: NSData, atPath path: String) -> Bool
     
     ///
     /// A file location for an application's main bundle
@@ -78,7 +77,7 @@ public protocol SFFileManagerProtocol {
     ///
     /// - returns: BOOL Whether or not the file was deleted.
     ///
-    static func removeFileAtPath(path: String) -> SFFailable
+    static func removeFileAtPath(path: String) -> NSError?
     
     ///
     /// Returns the content of the file at path as a string
