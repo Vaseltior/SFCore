@@ -19,6 +19,7 @@ platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     increment_build_number
+    ensure_git_branch(branch: 'master')
   end
 
   desc "Runs all the tests"
@@ -36,22 +37,11 @@ platform :ios do
 	#  build_directory: '~/Library/Developer/Xcode/DerivedData',
 	#  proj: 'SFCore.xcodeproj'
 	#)
-	gcovr(
-		html: true,
-		html_details: true,
-		output: "./code-coverage/report.html"
-	)
-  end
-
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    # sigh
-    gym # Build your app - more options available
-    pilot
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here
+	#gcovr(
+	#	html: true,
+	#	html_details: true,
+	#	output: "./code-coverage/report.html"
+	#)
   end
 
   desc "Deploy a new version to the App Store"
@@ -67,10 +57,7 @@ platform :ios do
 
   after_all do |lane|
     # This block is called, only if the executed lane was successful
-    
-    #slack(
-    #   message: "Successfully deployed new App Update."
-    # )
+    jazzy
   end
 
   error do |lane, exception|

@@ -29,6 +29,8 @@
 		F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B11AA448940037657D /* Int+SFBoundi.swift */; };
 		F55DE5B51AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
 		F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
+		F5B446BF1C57F93400060453 /* Set+SFCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446BE1C57F93400060453 /* Set+SFCore.swift */; };
+		F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446C01C57F95400060453 /* SetSFCoreTests.swift */; };
 		F5EA8BCE1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */; };
 		F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */; };
 		F5EDF04D1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */; };
@@ -62,6 +64,8 @@
 		F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFBeginEnd.swift"; sourceTree = "<group>"; };
 		F55DE5B11AA448940037657D /* Int+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+SFBoundi.swift"; sourceTree = "<group>"; };
 		F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt+SFBoundi.swift"; sourceTree = "<group>"; };
+		F5B446BE1C57F93400060453 /* Set+SFCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+SFCore.swift"; sourceTree = "<group>"; };
+		F5B446C01C57F95400060453 /* SetSFCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSFCoreTests.swift; sourceTree = "<group>"; };
 		F5EA8BCA1AB0A755002796D8 /* SFAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFAssociation.swift; sourceTree = "<group>"; };
 		F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SFOrientation.swift"; sourceTree = "<group>"; };
 		F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SFRGB.swift"; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				F55DE5371AA351D20037657D /* SFCoreTests.swift */,
 				F55DE5351AA351D20037657D /* Supporting Files */,
 				E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */,
+				F5B446C01C57F95400060453 /* SetSFCoreTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 		F55DE5451AA3D2060037657D /* _extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F5B446BE1C57F93400060453 /* Set+SFCore.swift */,
 				F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */,
 				F55DE5461AA3D2060037657D /* Array+SG.swift */,
 				F55DE54C1AA3D47B0037657D /* String+SFCharacters.swift */,
@@ -325,6 +331,7 @@
 				F55DE59E1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5521AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F55DE5541AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
+				F5B446BF1C57F93400060453 /* Set+SFCore.swift in Sources */,
 				F55DE54D1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
 				F5EDF04D1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */,
 				F55DE5A91AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
@@ -345,6 +352,7 @@
 				F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */,
 				F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
+				F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */,
 				F55DE5491AA3D2060037657D /* Array+SG.swift in Sources */,
 				F55DE5551AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
 				F55DE54E1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
@@ -381,7 +389,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -430,7 +438,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -457,7 +465,7 @@
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 30;
+				DYLIB_CURRENT_VERSION = 31;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SFCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -473,7 +481,7 @@
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 30;
+				DYLIB_CURRENT_VERSION = 31;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SFCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
