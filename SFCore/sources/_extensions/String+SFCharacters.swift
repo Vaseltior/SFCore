@@ -70,4 +70,16 @@ extension String {
   public var trim: String {
     return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
   }
+
+  /**
+   Returns the NSNumber corresponding to the string
+
+   - returns: NSNumber corresponding to the string, NSNumber(0) if the string is irrelevent
+   */
+  public func toNSNumber() -> NSNumber {
+    // If the initial value is 0.00, we should clear the value to simplify the user experience
+    let formatter: NSNumberFormatter = NSNumberFormatter()
+    formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+    return formatter.numberFromString(self) ?? NSNumber(double: 0)
+  }
 }

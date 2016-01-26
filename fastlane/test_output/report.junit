@@ -1,16 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites tests='7' failures='0'>
+<testsuites tests='8' failures='0'>
   <testsuite name='SFCoreTests.SFCoreTests' tests='2' failures='0'>
-    <testcase classname='SFCoreTests.SFCoreTests' name='testExample' time='0.058'/>
-    <testcase classname='SFCoreTests.SFCoreTests' name='testPerformanceExample' time='0.551'/>
+    <testcase classname='SFCoreTests.SFCoreTests' name='testExample' time='0.030'/>
+    <testcase classname='SFCoreTests.SFCoreTests' name='testPerformanceExample' time='0.343'/>
   </testsuite>
   <testsuite name='SFCoreTests.SetSFCoreTests' tests='2' failures='0'>
-    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapCardinalityOnSet' time='0.257'/>
-    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapIdentityOnSet' time='0.006'/>
+    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapCardinalityOnSet' time='0.048'/>
+    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapIdentityOnSet' time='0.004'/>
   </testsuite>
-  <testsuite name='SFCoreTests.StringSFCharactersTests' tests='3' failures='0'>
-    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCapitalizeFirst' time='0.069'/>
-    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCharacterGet' time='0.043'/>
-    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testTrim' time='0.010'/>
+  <testsuite name='SFCoreTests.StringSFCharactersTests' tests='4' failures='0'>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCapitalizeFirst' time='0.084'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCharacterGet' time='0.046'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testToNSNumber' time='0.014'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testTrim' time='0.020'/>
   </testsuite>
 </testsuites>

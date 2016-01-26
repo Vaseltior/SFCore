@@ -49,4 +49,16 @@ class StringSFCharactersTests: XCTestCase {
     s = "toto       "
     XCTAssert(s.trim == "toto")
   }
+
+  func testToNSNumber() {
+    let goodString = "0"
+    XCTAssertTrue(NSNumber(integer: 0).compare(goodString.toNSNumber()) == NSComparisonResult.OrderedSame, "Number should be 0")
+    let badString = "dflgjhdflkghdflgkjhd"
+    XCTAssertTrue(NSNumber(integer: 0).compare(badString.toNSNumber()) == NSComparisonResult.OrderedSame, "A bad string should return 0")
+
+    if let decimalSeparator = NSNumberFormatter().decimalSeparator {
+      let decimalString = "123\(decimalSeparator)456"
+      XCTAssertTrue(NSNumber(double: 123.456).compare(decimalString.toNSNumber()) == NSComparisonResult.OrderedSame)
+    }
+  }
 }
