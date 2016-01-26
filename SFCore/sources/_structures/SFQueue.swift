@@ -40,7 +40,7 @@ public class SFQueue<T> {
     private var top: SFQNode<T>! = SFQNode<T>()
 
     //enqueue the specified object
-    func enQueue(var key: T) {
+    public func enQueue( key: T) {
         
         //check for the instance
         if (top == nil) {
@@ -49,11 +49,11 @@ public class SFQueue<T> {
         
         //establish the top node
         if (top.key == nil) {
-            top.key = key;
+            top.key = key
             return
         }
         
-        var childToUse: SFQNode<T> = SFQNode<T>()
+        let childToUse: SFQNode<T> = SFQNode<T>()
         var current: SFQNode = top
         
         //cycle through the list of items to get to the end.
@@ -61,12 +61,12 @@ public class SFQueue<T> {
             current = current.next!
         }
         //append a new item
-        childToUse.key = key;
-        current.next = childToUse;
+        childToUse.key = key
+        current.next = childToUse
     }
     
     //retrieve items from the top level in O(1) constant time</span>
-    func deQueue() -> T? {
+    public func deQueue() -> T? {
         
         //determine if the key or instance exists</span>
         let topitem: T? = self.top?.key
@@ -76,13 +76,12 @@ public class SFQueue<T> {
         }
         
         //retrieve and queue the next item</span>
-        var queueitem: T? = top.key!
+        let queueitem: T? = top.key!
         
         //use optional binding</span>
         if let nextitem = top.next {
             top = nextitem
-        }
-        else {
+        } else {
             top = nil
         }
         
@@ -90,14 +89,13 @@ public class SFQueue<T> {
     }
     
     //check for the presence of a value</span>
-    func isEmpty() -> Bool {
+    public func isEmpty() -> Bool {
         
         //determine if the key or instance exist</span>
-        if let topitem: T = self.top?.key {
+        if let _: T = self.top?.key {
             return false
-        }
-            
-        else {
+
+        } else {
             return true
         }
         
@@ -105,7 +103,7 @@ public class SFQueue<T> {
     
     
     //retrieve the top most item</span>
-    func peek() -> T? {
+    public func peek() -> T? {
         return top.key!
     }
 }

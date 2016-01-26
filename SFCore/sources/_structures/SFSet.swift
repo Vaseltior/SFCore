@@ -32,39 +32,44 @@
 import Foundation
 
 public struct SFSet<T: Hashable> {
-    typealias Index = T
-    private var dictionary: [T: Bool] = [:]
-    
-    var count: Int {
-        return self.dictionary.count
+  typealias Index = T
+  private var dictionary: [T: Bool]
+  
+  public init() {
+    self.dictionary = [T: Bool]()
+  }
+  
+  public var count: Int {
+    return self.dictionary.count
+  }
+  
+  public var isEmpty: Bool {
+    return self.dictionary.isEmpty
+  }
+  
+  public func contains(element: T) -> Bool {
+    return self.dictionary[element] ?? false
+  }
+  
+  public mutating func put(element: T) {
+    self.dictionary[element] = true
+  }
+  
+  public mutating func remove(element: T) -> Bool {
+    if self.contains(element) {
+      self.dictionary.removeValueForKey(element)
+      return true
+    } else {
+      return false
     }
-    
-    var isEmpty: Bool {
-        return self.dictionary.isEmpty
-    }
-    
-    func contains(element: T) -> Bool {
-        return self.dictionary[element] ?? false
-    }
-    
-    mutating func put(element: T) {
-        self.dictionary[element] = true
-    }
-    
-    mutating func remove(element: T) -> Bool {
-        if self.contains(element) {
-            self.dictionary.removeValueForKey(element)
-            return true
-        } else {
-            return false
-        }
-    }
+  }
 }
 
 extension SFSet: ArrayLiteralConvertible {
-    public init(arrayLiteral elements: T...) {
-        for element in elements {
-            put(element)
-        }
+  public init(arrayLiteral elements: T...) {
+    self.init()
+    for element in elements {
+      put(element)
     }
+  }
 }

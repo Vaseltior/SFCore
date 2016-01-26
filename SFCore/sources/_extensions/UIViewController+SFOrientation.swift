@@ -23,29 +23,37 @@
 //
 
 //
-//  SFCore : UInt+SFBoundi.swift
+//  synchro-agenda : UIViewController+SFOrientation.swift
 //
-//  Created by Samuel Grau on 02/03/2015.
-//  Copyright (c) 2015 Samuel Grau. All rights reserved.
+//  Created by Samuel Grau on 11/03/2015.
+//  Copyright (c) 2015 Aviva France. All rights reserved.
 //
 
 import Foundation
+import UIKit
 
-extension UInt {
-    public static func boundi(value: UInt, min: UInt, max: UInt) -> UInt {
-        var iMax = max
-        if (max < min) {
-            iMax = min
-        }
-        
-        var bounded = value
-        if (bounded > iMax) {
-            bounded = iMax
-        }
-        if (bounded < min) {
-            bounded = min
-        }
-        
-        return bounded
+extension UIViewController {
+    
+    func startListeningToOrientationChanges() {
+        UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "orientationDidChange:",
+            name: UIDeviceOrientationDidChangeNotification,
+            object: nil
+        )
+    }
+    
+    func stopListeningToOrientationChanges() {
+        UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications()
+        NSNotificationCenter.defaultCenter().removeObserver(
+            self,
+            name: UIDeviceOrientationDidChangeNotification,
+            object: nil
+        )
+    }
+    
+    func orientationDidChange(notification: NSNotification) {
+        // No-op
     }
 }

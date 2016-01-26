@@ -21,53 +21,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
-//  SFCore : String+SFCharacters.swift
+
 //
-//  Created by Samuel Grau on 02/03/2015.
+//  SFCore : SFAssociation.swift
+//
+//  Created by Samuel Grau on 11/03/2015.
 //  Copyright (c) 2015 Samuel Grau. All rights reserved.
 //
 
 import Foundation
 
-extension String {
-  ///
-  /// Returns the representation of the character at position `i`
-  /// in the string
-  ///
-  /// - parameter i: the index of the wanted character
-  ///
-  /// - returns: The string describing the character at index `i`.
-  ///
-  public func getCharacter(index: Int) -> Character {
-    return self[self.startIndex.advancedBy(index)]
-  }
 
-  ///
-  /// Returns the representation of the character at position `i`
-  /// in the string
-  ///
-  /// - parameter i: the index of the wanted character
-  ///
-  /// - returns: The string describing the character at index `i`.
-  ///
-  public subscript (index: Int) -> String {
-    return String(self.getCharacter(index) as Character)
-  }
+public class ObjectAssociationWrapper : NSObject {
+  let value: AnyObject
 
-  ///
-  ///
-  ///
-  public func characterString(index: Int) -> String {
-    return self[index] //String(self.getCharacter(i) as Character)
+  init(value: AnyObject) {
+    self.value = value
   }
+}
 
-  public var capitalizeFirst: String {
-    var result = self
-    result.replaceRange(startIndex...startIndex, with: String(self[startIndex]).capitalizedString)
-    return result
-  }
+extension NSObject {
 
-  public var trim: String {
-    return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+  public var swiftAssociatedObject : AnyObject! {
+    get {
+      let wrapper = objc_getAssociatedObject(self, someKey) as SFCore.ObjectAssociationWrapper?
+      return wrapper?.value
+    }
+    set(value) {
+      let wrapper = SFCore.ObjectAssociationWrapper(value: value)
+      objc_setAssociatedObject(self, someKey, wrapper, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+    }
   }
 }
