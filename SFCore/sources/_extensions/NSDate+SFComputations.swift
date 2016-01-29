@@ -32,7 +32,7 @@
 import Foundation
 
 extension NSDate {
-
+  
   ///
   /// Returns the number of seconds in one year
   ///
@@ -41,7 +41,7 @@ extension NSDate {
   public class func sfYearInSeconds() -> NSTimeInterval {
     return 365 * (60 * 60 * 24)
   }
-
+  
   ///
   /// Returns the number of days between two dates
   ///
@@ -65,7 +65,7 @@ extension NSDate {
 
 /// MARK: - Comparable -
 
-extension NSDate: Comparable {}
+extension NSDate {}
 
 public func == (lhs: NSDate, rhs: NSDate) -> Bool {
   return lhs === rhs || lhs.compare(rhs) == .OrderedSame
@@ -73,6 +73,10 @@ public func == (lhs: NSDate, rhs: NSDate) -> Bool {
 
 public func < (lhs: NSDate, rhs: NSDate) -> Bool {
   return lhs.compare(rhs) == .OrderedAscending
+}
+
+public func <= (lhs: NSDate, rhs: NSDate) -> Bool {
+  return lhs < rhs || lhs.compare(rhs) == .OrderedAscending
 }
 
 public func > (lhs: NSDate, rhs: NSDate) -> Bool {

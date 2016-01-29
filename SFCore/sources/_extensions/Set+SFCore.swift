@@ -13,13 +13,13 @@ import Foundation
 ///
 extension Set {
   /**
-   Transforms a set as an array would do applying the map function
-
-   - parameter transform: the transformation closure to apply to the original set
-
-   - returns: the result set transformed by tranform
-   */
-  public func map<U>(transform: (Element) -> U) -> Set<U> {
-    return Set<U>(self.map(transform))
-  }
+  Transforms a set as an array would do applying the map function
+  
+  - parameter transform: the transformation closure to apply to the original set
+  
+  - returns: the result set transformed by tranform
+  */
+  /*public func map<U>(transform: (Element) -> U) -> Set<U> {
+  return Set<U>(self.map(transform))
+  }*/
 }

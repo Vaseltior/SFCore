@@ -9,17 +9,17 @@
 import XCTest
 
 class StringSFCharactersTests: XCTestCase {
-
+  
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
-
+  
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
   }
-
+  
   func testCharacterGet() {
     let s = "toto"
     XCTAssert(s.getCharacter(0) == "t")
@@ -35,12 +35,12 @@ class StringSFCharactersTests: XCTestCase {
     XCTAssert(s.characterString(2) == "t")
     XCTAssert(s.characterString(3) == "o")
   }
-
+  
   func testCapitalizeFirst() {
     let s = "toto"
     XCTAssert(s.capitalizeFirst == "Toto")
   }
-
+  
   func testTrim() {
     var s = "   toto"
     XCTAssert(s.trim == "toto")
@@ -49,13 +49,19 @@ class StringSFCharactersTests: XCTestCase {
     s = "toto       "
     XCTAssert(s.trim == "toto")
   }
-
+  
   func testToNSNumber() {
     let goodString = "0"
-    XCTAssertTrue(NSNumber(integer: 0).compare(goodString.toNSNumber()) == NSComparisonResult.OrderedSame, "Number should be 0")
+    XCTAssertTrue(
+      NSNumber(integer: 0).compare(goodString.toNSNumber()) == NSComparisonResult.OrderedSame,
+      "Number should be 0"
+    )
     let badString = "dflgjhdflkghdflgkjhd"
-    XCTAssertTrue(NSNumber(integer: 0).compare(badString.toNSNumber()) == NSComparisonResult.OrderedSame, "A bad string should return 0")
-
+    XCTAssertTrue(
+      NSNumber(integer: 0).compare(badString.toNSNumber()) == NSComparisonResult.OrderedSame,
+      "A bad string should return 0"
+    )
+    
     if let decimalSeparator = NSNumberFormatter().decimalSeparator {
       let decimalString = "123\(decimalSeparator)456"
       XCTAssertTrue(NSNumber(double: 123.456).compare(decimalString.toNSNumber()) == NSComparisonResult.OrderedSame)
