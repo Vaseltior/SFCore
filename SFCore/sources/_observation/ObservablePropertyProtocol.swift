@@ -36,7 +36,7 @@ public protocol Disposable {
  An Event class representation
  */
 public class Event<T> {
-  
+  public init() {}
   public typealias EventHandler = T -> ()
   
   private var eventHandlers = [Invocable]()
