@@ -12,6 +12,8 @@
 		F53955641C5D5E0200852A8D /* ObservablePropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */; };
 		F53955671C5D5FF600852A8D /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955661C5D5FF600852A8D /* Email.swift */; };
 		F53955681C5D5FF600852A8D /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955661C5D5FF600852A8D /* Email.swift */; };
+		F54CCDB51C5E12080089799E /* SGBufferedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */; };
+		F54CCDB61C5E12080089799E /* SGBufferedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */; };
 		F55DE52B1AA351D10037657D /* SFCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F55DE52A1AA351D10037657D /* SFCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F55DE5311AA351D20037657D /* SFCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE5251AA351D10037657D /* SFCore.framework */; };
 		F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5371AA351D20037657D /* SFCoreTests.swift */; };
@@ -58,6 +60,7 @@
 		E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SFCharactersTests.swift"; sourceTree = "<group>"; };
 		F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertyProtocol.swift; sourceTree = "<group>"; };
 		F53955661C5D5FF600852A8D /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGBufferedNavigationController.swift; sourceTree = "<group>"; };
 		F55DE5251AA351D10037657D /* SFCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55DE5291AA351D10037657D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F55DE52A1AA351D10037657D /* SFCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFCore.h; sourceTree = "<group>"; };
@@ -115,6 +118,14 @@
 				F53955661C5D5FF600852A8D /* Email.swift */,
 			);
 			path = _objects;
+			sourceTree = "<group>";
+		};
+		F54CCDB31C5E11F50089799E /* _presentation_layer */ = {
+			isa = PBXGroup;
+			children = (
+				F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */,
+			);
+			path = _presentation_layer;
 			sourceTree = "<group>";
 		};
 		F55DE51B1AA351D10037657D = {
@@ -176,6 +187,7 @@
 		F55DE5441AA3D2060037657D /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				F54CCDB31C5E11F50089799E /* _presentation_layer */,
 				F53955651C5D5FEC00852A8D /* _objects */,
 				F53955611C5D5DEA00852A8D /* _observation */,
 				F5EA8BC91AB0A745002796D8 /* _association */,
@@ -354,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54CCDB51C5E12080089799E /* SGBufferedNavigationController.swift in Sources */,
 				F53955631C5D5E0200852A8D /* ObservablePropertyProtocol.swift in Sources */,
 				F5EA8BCE1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */,
 				F55DE5AC1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
@@ -383,6 +396,7 @@
 				F55DE5AD1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
 				F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */,
 				F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */,
+				F54CCDB61C5E12080089799E /* SGBufferedNavigationController.swift in Sources */,
 				E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */,
 				F55DE5AA1AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
 				F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */,
