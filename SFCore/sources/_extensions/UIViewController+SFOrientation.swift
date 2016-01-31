@@ -33,27 +33,27 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    
-    func startListeningToOrientationChanges() {
-        UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: "orientationDidChange:",
-            name: UIDeviceOrientationDidChangeNotification,
-            object: nil
-        )
-    }
-    
-    func stopListeningToOrientationChanges() {
-        UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications()
-        NSNotificationCenter.defaultCenter().removeObserver(
-            self,
-            name: UIDeviceOrientationDidChangeNotification,
-            object: nil
-        )
-    }
-    
-    func orientationDidChange(notification: NSNotification) {
-        // No-op
-    }
+  
+  func startListeningToOrientationChanges() {
+    UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
+    NSNotificationCenter.defaultCenter().addObserver(
+      self,
+      selector: "orientationDidChange:",
+      name: UIDeviceOrientationDidChangeNotification,
+      object: nil
+    )
+  }
+  
+  func stopListeningToOrientationChanges() {
+    UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications()
+    NSNotificationCenter.defaultCenter().removeObserver(
+      self,
+      name: UIDeviceOrientationDidChangeNotification,
+      object: nil
+    )
+  }
+  
+  func orientationDidChange(notification: NSNotification) {
+    // No-op
+  }
 }
