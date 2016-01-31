@@ -3,32 +3,32 @@
   <testsuite name="run">
     
       
-      <testcase name="0: Verifying required fastlane version" time="0.001141">
+      <testcase name="0: Verifying required fastlane version" time="0.000963">
         
       </testcase>
     
       
-      <testcase name="1: default_platform" time="0.000847">
+      <testcase name="1: default_platform" time="0.000601">
         
       </testcase>
     
       
-      <testcase name="2: increment_build_number" time="5.503775">
+      <testcase name="2: increment_build_number" time="4.879134">
         
       </testcase>
     
       
-      <testcase name="3: ensure_git_branch" time="0.092625">
+      <testcase name="3: ensure_git_branch" time="0.028946">
         
       </testcase>
     
       
-      <testcase name="4: scan" time="58.879674">
+      <testcase name="4: scan" time="43.619039">
         
       </testcase>
     
       
-      <testcase name="5: jazzy" time="46.715398">
+      <testcase name="5: jazzy" time="26.699062">
         
       </testcase>
     

@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites tests='9' failures='0'>
   <testsuite name='SFCoreTests.DoubleShortHandsTests' tests='1' failures='0'>
-    <testcase classname='SFCoreTests.DoubleShortHandsTests' name='testRoundedToPlaces' time='0.145'/>
+    <testcase classname='SFCoreTests.DoubleShortHandsTests' name='testRoundedToPlaces' time='0.172'/>
   </testsuite>
   <testsuite name='SFCoreTests.SFCoreTests' tests='2' failures='0'>
-    <testcase classname='SFCoreTests.SFCoreTests' name='testExample' time='0.138'/>
-    <testcase classname='SFCoreTests.SFCoreTests' name='testPerformanceExample' time='0.684'/>
+    <testcase classname='SFCoreTests.SFCoreTests' name='testExample' time='0.021'/>
+    <testcase classname='SFCoreTests.SFCoreTests' name='testPerformanceExample' time='0.665'/>
   </testsuite>
   <testsuite name='SFCoreTests.SetSFCoreTests' tests='2' failures='0'>
-    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapCardinalityOnSet' time='0.117'/>
-    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapIdentityOnSet' time='0.023'/>
+    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapCardinalityOnSet' time='0.045'/>
+    <testcase classname='SFCoreTests.SetSFCoreTests' name='testMapIdentityOnSet' time='0.007'/>
   </testsuite>
   <testsuite name='SFCoreTests.StringSFCharactersTests' tests='4' failures='0'>
-    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCapitalizeFirst' time='0.156'/>
-    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCharacterGet' time='0.013'/>
-    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testToNSNumber' time='0.016'/>
-    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testTrim' time='0.004'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCapitalizeFirst' time='0.038'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testCharacterGet' time='0.017'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testToNSNumber' time='0.033'/>
+    <testcase classname='SFCoreTests.StringSFCharactersTests' name='testTrim' time='0.024'/>
   </testsuite>
 </testsuites>

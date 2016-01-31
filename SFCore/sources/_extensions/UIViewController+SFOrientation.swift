@@ -34,7 +34,10 @@ import UIKit
 
 extension UIViewController {
   
-  func startListeningToOrientationChanges() {
+  /**
+   Set the view controller as an observer of device rotations
+   */
+  public func startListeningToOrientationChanges() {
     UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
     NSNotificationCenter.defaultCenter().addObserver(
       self,
@@ -44,7 +47,10 @@ extension UIViewController {
     )
   }
   
-  func stopListeningToOrientationChanges() {
+  /**
+   Remove the view controller as an observer of device rotations
+   */
+  public func stopListeningToOrientationChanges() {
     UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications()
     NSNotificationCenter.defaultCenter().removeObserver(
       self,
@@ -53,7 +59,12 @@ extension UIViewController {
     )
   }
   
-  func orientationDidChange(notification: NSNotification) {
+  /**
+   Reacts to a notification when a orientation did change is detected by the device
+   
+   - parameter notification: The notification with name `UIDeviceOrientationDidChangeNotification`
+   */
+  public func orientationDidChange(notification: NSNotification) {
     // No-op
   }
 }
