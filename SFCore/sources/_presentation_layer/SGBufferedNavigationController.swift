@@ -14,7 +14,8 @@ let bufferedNavigationQueue = dispatch_queue_create("com.vaseltior.BufferedNavig
 typealias SGBCodeBlock = (Void) -> (Void)
 
 /**
- BufferedNavigationController extends UINavigationController to automatically queue up transitions between view controllers.
+ BufferedNavigationController extends UINavigationController to automatically queue up transitions 
+ between view controllers.
  
  This prevents you receiving errors such as:
  "Finishing up a navigation transition in an unexpected state. Navigation Bar subview tree might get corrupted."
@@ -131,29 +132,37 @@ public class SGBufferedNavigationController: UINavigationController, UINavigatio
   
   // MARK: - UINavigationControllerDelegate
   
-  public func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-    dispatch_sync(bufferedNavigationQueue) {
-      self.isTransitioning = true
+  public func navigationController(
+    navigationController: UINavigationController,
+    willShowViewController viewController: UIViewController,
+    animated: Bool) {
       
-      guard let transitionCoordinator = navigationController.topViewController?.transitionCoordinator() else {
-        return
-      }
-      
-      transitionCoordinator.notifyWhenInteractionEndsUsingBlock({ (context: UIViewControllerTransitionCoordinatorContext) -> Void in
-        if context.isCancelled() {
-          dispatch_sync(bufferedNavigationQueue) {
-            self.isTransitioning = false
-          }
+      dispatch_sync(bufferedNavigationQueue) {
+        self.isTransitioning = true
+        
+        guard let transitionCoordinator = navigationController.topViewController?.transitionCoordinator() else {
+          return
         }
-      })
-    }
+        
+        transitionCoordinator.notifyWhenInteractionEndsUsingBlock({ (context: UIViewControllerTransitionCoordinatorContext) -> Void in
+          if context.isCancelled() {
+            dispatch_sync(bufferedNavigationQueue) {
+              self.isTransitioning = false
+            }
+          }
+        })
+      }
   }
   
-  public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
-    dispatch_sync(bufferedNavigationQueue) {
-      self.isTransitioning = false
-      self.runNextBlock()
-    }
+  public func navigationController(
+    navigationController: UINavigationController,
+    didShowViewController viewController: UIViewController,
+    animated: Bool) {
+      
+      dispatch_sync(bufferedNavigationQueue) {
+        self.isTransitioning = false
+        self.runNextBlock()
+      }
   }
   
   // MARK: - Private methods

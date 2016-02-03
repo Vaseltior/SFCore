@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */; };
+		F5039C421C62A7D60034CCFD /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C411C62A7D60034CCFD /* GCD.swift */; };
+		F5039C431C62A7D60034CCFD /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C411C62A7D60034CCFD /* GCD.swift */; };
+		F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C441C62A8000034CCFD /* GCDTests.swift */; };
 		F53955631C5D5E0200852A8D /* ObservablePropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */; };
 		F53955641C5D5E0200852A8D /* ObservablePropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */; };
 		F53955671C5D5FF600852A8D /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955661C5D5FF600852A8D /* Email.swift */; };
@@ -58,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SFCharactersTests.swift"; sourceTree = "<group>"; };
+		F5039C411C62A7D60034CCFD /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		F5039C441C62A8000034CCFD /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
 		F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertyProtocol.swift; sourceTree = "<group>"; };
 		F53955661C5D5FF600852A8D /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGBufferedNavigationController.swift; sourceTree = "<group>"; };
@@ -104,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5039C401C62A7C70034CCFD /* _functions */ = {
+			isa = PBXGroup;
+			children = (
+				F5039C411C62A7D60034CCFD /* GCD.swift */,
+			);
+			path = _functions;
+			sourceTree = "<group>";
+		};
 		F53955611C5D5DEA00852A8D /* _observation */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +185,7 @@
 				E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */,
 				F5B446C01C57F95400060453 /* SetSFCoreTests.swift */,
 				F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */,
+				F5039C441C62A8000034CCFD /* GCDTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 		F55DE5441AA3D2060037657D /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				F5039C401C62A7C70034CCFD /* _functions */,
 				F54CCDB31C5E11F50089799E /* _presentation_layer */,
 				F53955651C5D5FEC00852A8D /* _objects */,
 				F53955611C5D5DEA00852A8D /* _observation */,
@@ -381,6 +396,7 @@
 				F53955671C5D5FF600852A8D /* Email.swift in Sources */,
 				F55DE54D1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
 				F5EDF04D1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */,
+				F5039C421C62A7D60034CCFD /* GCD.swift in Sources */,
 				F55DE5A91AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,9 +415,11 @@
 				F54CCDB61C5E12080089799E /* SGBufferedNavigationController.swift in Sources */,
 				E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */,
 				F55DE5AA1AA3FBD00037657D /* NSDate+SFComputations.swift in Sources */,
+				F5039C431C62A7D60034CCFD /* GCD.swift in Sources */,
 				F5EA8BCF1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */,
 				F55DE59F1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
+				F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */,
 				F5DD48AF1C5AC436006D06E3 /* Double+ShortHands.swift in Sources */,
 				F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */,
 				F53955681C5D5FF600852A8D /* Email.swift in Sources */,
