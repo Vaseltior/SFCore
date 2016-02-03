@@ -11,8 +11,10 @@
 		F5039C421C62A7D60034CCFD /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C411C62A7D60034CCFD /* GCD.swift */; };
 		F5039C431C62A7D60034CCFD /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C411C62A7D60034CCFD /* GCD.swift */; };
 		F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C441C62A8000034CCFD /* GCDTests.swift */; };
-		F5039C471C62AD380034CCFD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C461C62AD380034CCFD /* Settings.swift */; };
-		F5039C481C62AD380034CCFD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C461C62AD380034CCFD /* Settings.swift */; };
+		F5039C4B1C62AFDD0034CCFD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C4A1C62AFDD0034CCFD /* Settings.swift */; };
+		F5039C4C1C62AFDD0034CCFD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C4A1C62AFDD0034CCFD /* Settings.swift */; };
+		F5039C4E1C62B0C30034CCFD /* Settings+Texting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C4D1C62B0C30034CCFD /* Settings+Texting.swift */; };
+		F5039C4F1C62B0C30034CCFD /* Settings+Texting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C4D1C62B0C30034CCFD /* Settings+Texting.swift */; };
 		F53955631C5D5E0200852A8D /* ObservablePropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */; };
 		F53955641C5D5E0200852A8D /* ObservablePropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */; };
 		F53955671C5D5FF600852A8D /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955661C5D5FF600852A8D /* Email.swift */; };
@@ -65,7 +67,8 @@
 		E15CE6561C47A74D002DB16A /* String+SFCharactersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SFCharactersTests.swift"; sourceTree = "<group>"; };
 		F5039C411C62A7D60034CCFD /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		F5039C441C62A8000034CCFD /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
-		F5039C461C62AD380034CCFD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F5039C4A1C62AFDD0034CCFD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F5039C4D1C62B0C30034CCFD /* Settings+Texting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+Texting.swift"; sourceTree = "<group>"; };
 		F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertyProtocol.swift; sourceTree = "<group>"; };
 		F53955661C5D5FF600852A8D /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGBufferedNavigationController.swift; sourceTree = "<group>"; };
@@ -120,6 +123,15 @@
 			path = _functions;
 			sourceTree = "<group>";
 		};
+		F5039C491C62AFAC0034CCFD /* _settings */ = {
+			isa = PBXGroup;
+			children = (
+				F5039C4A1C62AFDD0034CCFD /* Settings.swift */,
+				F5039C4D1C62B0C30034CCFD /* Settings+Texting.swift */,
+			);
+			path = _settings;
+			sourceTree = "<group>";
+		};
 		F53955611C5D5DEA00852A8D /* _observation */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				F53955661C5D5FF600852A8D /* Email.swift */,
-				F5039C461C62AD380034CCFD /* Settings.swift */,
 			);
 			path = _objects;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 		F55DE5441AA3D2060037657D /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				F5039C491C62AFAC0034CCFD /* _settings */,
 				F5039C401C62A7C70034CCFD /* _functions */,
 				F54CCDB31C5E11F50089799E /* _presentation_layer */,
 				F53955651C5D5FEC00852A8D /* _objects */,
@@ -391,7 +403,7 @@
 				F55DE5AC1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
 				F55DE5B21AA448940037657D /* Int+SFBoundi.swift in Sources */,
 				F55DE5481AA3D2060037657D /* Array+SG.swift in Sources */,
-				F5039C471C62AD380034CCFD /* Settings.swift in Sources */,
+				F5039C4B1C62AFDD0034CCFD /* Settings.swift in Sources */,
 				F55DE5B51AA448B00037657D /* UInt+SFBoundi.swift in Sources */,
 				F55DE59E1AA3E8EA0037657D /* SFQueue.swift in Sources */,
 				F55DE5521AA3D57F0037657D /* SFFileManager.swift in Sources */,
@@ -399,6 +411,7 @@
 				F55DE5541AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
 				F5B446BF1C57F93400060453 /* Set+SFCore.swift in Sources */,
 				F53955671C5D5FF600852A8D /* Email.swift in Sources */,
+				F5039C4E1C62B0C30034CCFD /* Settings+Texting.swift in Sources */,
 				F55DE54D1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
 				F5EDF04D1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */,
 				F5039C421C62A7D60034CCFD /* GCD.swift in Sources */,
@@ -414,6 +427,7 @@
 				F5EDF04E1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */,
 				F55DE5531AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F5DD48B11C5AC460006D06E3 /* DoubleShortHandsTests.swift in Sources */,
+				F5039C4F1C62B0C30034CCFD /* Settings+Texting.swift in Sources */,
 				F55DE5AD1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */,
 				F55DE5B61AA448B00037657D /* UInt+SFBoundi.swift in Sources */,
 				F55DE5B31AA448940037657D /* Int+SFBoundi.swift in Sources */,
@@ -430,7 +444,7 @@
 				F53955681C5D5FF600852A8D /* Email.swift in Sources */,
 				F55DE5491AA3D2060037657D /* Array+SG.swift in Sources */,
 				F55DE5551AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
-				F5039C481C62AD380034CCFD /* Settings.swift in Sources */,
+				F5039C4C1C62AFDD0034CCFD /* Settings.swift in Sources */,
 				F55DE54E1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
