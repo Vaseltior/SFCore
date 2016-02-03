@@ -41,7 +41,7 @@ extension String {
   public func getCharacter(index: Int) -> Character {
     return self[self.startIndex.advancedBy(index)]
   }
-
+  
   ///
   /// Returns the representation of the character at position `i`
   /// in the string
@@ -53,27 +53,27 @@ extension String {
   public subscript (index: Int) -> String {
     return String(self.getCharacter(index) as Character)
   }
-
+  
   ///
   ///
   ///
   public func characterString(index: Int) -> String {
     return self[index] //String(self.getCharacter(i) as Character)
   }
-
+  
   public var capitalizeFirst: String {
     var result = self
     result.replaceRange(startIndex...startIndex, with: String(self[startIndex]).capitalizedString)
     return result
   }
-
+  
   public var trim: String {
     return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
   }
-
+  
   /**
    Returns the NSNumber corresponding to the string
-
+   
    - returns: NSNumber corresponding to the string, NSNumber(0) if the string is irrelevent
    */
   public func toNSNumber() -> NSNumber {
@@ -82,4 +82,16 @@ extension String {
     formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
     return formatter.numberFromString(self) ?? NSNumber(double: 0)
   }
+  
+  /**
+   Tells if the given string is contained by the string
+   
+   - parameter find: The needle string to find
+   
+   - returns: returns `true` if the needle string is found in the haystack `self`, otherwise, returns `false`.
+   */
+  public func contains(find: String) -> Bool {
+    return self.rangeOfString(find) != nil
+  }
+  
 }
