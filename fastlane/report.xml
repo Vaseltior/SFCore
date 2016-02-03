@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="fastlane">
-  <testsuite name="run">
+<testsuites>
+  <testsuite name="fastlane.lanes">
     
       
-      <testcase name="0: Verifying required fastlane version" time="0.000963">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.001056">
         
       </testcase>
     
       
-      <testcase name="1: default_platform" time="0.000601">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000566">
         
       </testcase>
     
       
-      <testcase name="2: increment_build_number" time="4.879134">
+      <testcase classname="fastlane.lanes" name="2: increment_build_number" time="4.308999">
         
       </testcase>
     
       
-      <testcase name="3: ensure_git_branch" time="0.028946">
+      <testcase classname="fastlane.lanes" name="3: ensure_git_branch" time="0.022426">
         
       </testcase>
     
       
-      <testcase name="4: scan" time="43.619039">
+      <testcase classname="fastlane.lanes" name="4: scan" time="38.364706">
         
       </testcase>
     
       
-      <testcase name="5: jazzy" time="26.699062">
+      <testcase classname="fastlane.lanes" name="5: jazzy" time="33.652236">
         
       </testcase>
     
