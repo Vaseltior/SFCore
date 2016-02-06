@@ -39,14 +39,14 @@ extension NSManagedObject {
   ///
   ///
   ///
-  func setObjectPriority(priority: NSNumber, object: AnyObject, key: String) {
+  public func setObjectPriority(priority: NSNumber, object: AnyObject, key: String) {
     
   }
   
   ///
   ///
   ///
-  class func compareUniqueKeyFrom(
+  public class func compareUniqueKeyFrom(
     srcObject: AnyObject,
     with dstObject: AnyObject,
     context: AnyObject?) -> Bool {
@@ -56,7 +56,7 @@ extension NSManagedObject {
   ///
   ///
   ///
-  class func createObjectWithData(
+  public class func createObjectWithData(
     data: AnyObject,
     managedObjectContext moc: NSManagedObjectContext,
     context: AnyObject?
@@ -67,7 +67,7 @@ extension NSManagedObject {
   ///
   ///
   ///
-  class func updateObjectWithData(
+  public class func updateObjectWithData(
     data: AnyObject,
     managedObjectContext moc: NSManagedObjectContext,
     context: AnyObject?
@@ -78,7 +78,7 @@ extension NSManagedObject {
   ///
   ///
   ///
-  class func deleteObjectWithData(
+  public class func deleteObjectWithData(
     data: AnyObject,
     managedObjectContext moc: NSManagedObjectContext,
     context: AnyObject?
@@ -89,7 +89,7 @@ extension NSManagedObject {
   ///
   ///
   ///
-  class func synchronizeSortedInputData(
+  public class func synchronizeSortedInputData(
     inputObjects: [AnyObject],
     withSortedExistingData sortedExistingData: [AnyObject],
     priorityKey: String,
@@ -107,7 +107,7 @@ extension NSManagedObject {
   ///
   ///
   ///
-  class func synchronizeSortedInputData(
+  public class func synchronizeSortedInputData(
     inputObjects: [AnyObject],
     withSortedExistingData existingData: [AnyObject],
     priorityKey key: String,
