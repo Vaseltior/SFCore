@@ -47,7 +47,6 @@ public class SettingsHelper {
   public static func buildAndOpenURL(URLString: String) throws -> Bool {
     guard let URL = NSURL(string: URLString) else {
       throw SettingsHelperError.InvalidURL
-      return false
     }
     
     if UIApplication.sharedApplication().canOpenURL(URL) {
