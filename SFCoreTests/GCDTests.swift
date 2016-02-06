@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import SFCore
 
 class GCDTests: XCTestCase {
   func testGCDMainThread() {
