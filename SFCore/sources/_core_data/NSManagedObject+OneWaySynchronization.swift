@@ -131,7 +131,7 @@ extension NSManagedObject {
           self.owsInsertObject(object: srcMO, resultSet: &resultSet, key: key, managedObjectContext: moc, syncContext: context)
           
           // Mark as treated, and go to the next element
-          srcIndex++
+          srcIndex += 1
           
         } else {
           
@@ -145,8 +145,8 @@ extension NSManagedObject {
             self.owsUpdateObject(object: srcMO, resultSet: &resultSet, key: key, managedObjectContext: moc, syncContext: context)
             
             // We progress on both indexes
-            dstIndex++
-            srcIndex++
+            dstIndex += 1
+            srcIndex += 1
             
           } else {
             //
@@ -167,7 +167,7 @@ extension NSManagedObject {
               
               // There we are out of bounds, so this is an insertion
               self.owsInsertObject(object: srcMO, resultSet: &resultSet, key: key, managedObjectContext: moc, syncContext: context)
-              srcIndex++
+              srcIndex += 1
               
             } else {
               
@@ -182,11 +182,11 @@ extension NSManagedObject {
                 // it is a deletion of the Core Data object
                 self.deleteObjectWithData(dstMO, managedObjectContext:moc, context:context)
                 
-                dstIndex++
+                dstIndex += 1
                 
               } else {
                 self.owsInsertObject(object: srcMO, resultSet: &resultSet, key: key, managedObjectContext: moc, syncContext: context)
-                srcIndex++
+                srcIndex += 1
               }
             }
           }
