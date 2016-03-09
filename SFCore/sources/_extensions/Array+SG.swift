@@ -55,13 +55,13 @@ extension Array {
     return (self.isEmpty ? nil : self[self.count-1])
   }
   
-  ///
-  /// Tell if the given index is out of the bounds of the current array.
-  ///
-  /// - parameter index: The index to test boundaries
-  ///
-  /// - returns: true if the index is out of bounds, otherwise, false
-  ///
+  /**
+   Tell if the given index is out of the bounds of the current array.
+
+   - parameter index: The index to test boundaries
+
+   - returns: `true` if the index is out of bounds, otherwise, `false`.
+   */
   public func sfIsIndexOutOfBounds(index: Int) -> Bool {
     return ((index >= self.count) || (index < 0))
   }

@@ -14,7 +14,7 @@ import Foundation
  - parameter delay:   The delay
  - parameter closure: The closure to execute
  */
-public func gcdDelay(delay:Double, closure:()->()) {
+public func gcdDelay(delay:Double, closure: ()->()) {
   dispatch_after(
     dispatch_time(
       DISPATCH_TIME_NOW,
@@ -30,7 +30,7 @@ public func gcdDelay(delay:Double, closure:()->()) {
  
  - parameter closure: The closure to execute
  */
-public func gcdMainThread(closure:()->()) {
+public func gcdMainThread(closure: ()->()) {
   dispatch_async(dispatch_get_main_queue(), { () -> Void in
     closure()
   })
