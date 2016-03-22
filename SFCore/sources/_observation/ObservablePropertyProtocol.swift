@@ -15,7 +15,7 @@ import Foundation
  */
 public protocol ObservableProperty {
   /// The property type that is observed
-  typealias PropertyType
+  associatedtype PropertyType
   /// Property changed
   var propertyChanged: Event<(PropertyType, Any)> { get }
 }

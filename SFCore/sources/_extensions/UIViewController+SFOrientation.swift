@@ -41,7 +41,7 @@ extension UIViewController {
     UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
     NSNotificationCenter.defaultCenter().addObserver(
       self,
-      selector: "orientationDidChange:",
+      selector: #selector(UIViewController.orientationDidChange(_:)),
       name: UIDeviceOrientationDidChangeNotification,
       object: nil
     )
