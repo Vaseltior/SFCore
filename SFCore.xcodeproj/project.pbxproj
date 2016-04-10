@@ -32,6 +32,7 @@
 		F5763ADD1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */; };
 		F5763ADF1CBABDA2001B0660 /* BoundiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */; };
 		F5763AE11CBABF52001B0660 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763AE01CBABF52001B0660 /* ArrayTests.swift */; };
+		F5763AE31CBACBF7001B0660 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763AE21CBACBF7001B0660 /* ObservableTests.swift */; };
 		F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446C01C57F95400060453 /* SetSFCoreTests.swift */; };
 		F5DD48AE1C5AC436006D06E3 /* Double+ShortHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */; };
 		F5DD48B11C5AC460006D06E3 /* DoubleShortHandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */; };
@@ -81,10 +82,10 @@
 		F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerOrientationsTests.swift; sourceTree = "<group>"; };
 		F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundiTests.swift; sourceTree = "<group>"; };
 		F5763AE01CBABF52001B0660 /* ArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
+		F5763AE21CBACBF7001B0660 /* ObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 		F5B446C01C57F95400060453 /* SetSFCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSFCoreTests.swift; sourceTree = "<group>"; };
 		F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ShortHands.swift"; sourceTree = "<group>"; };
 		F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleShortHandsTests.swift; sourceTree = "<group>"; };
-		F5EA8BCA1AB0A755002796D8 /* SFAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFAssociation.swift; sourceTree = "<group>"; };
 		F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SFOrientation.swift"; sourceTree = "<group>"; };
 		F5ED7C311CB96A4300D815B4 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		F5ED7C331CBA41A600D815B4 /* SFQueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFQueueTests.swift; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 				F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */,
 				F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */,
 				F5763AE01CBABF52001B0660 /* ArrayTests.swift */,
+				F5763AE21CBACBF7001B0660 /* ObservableTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -225,7 +227,6 @@
 				F54CCDB31C5E11F50089799E /* _presentation_layer */,
 				F53955651C5D5FEC00852A8D /* _objects */,
 				F53955611C5D5DEA00852A8D /* _observation */,
-				F5EA8BC91AB0A745002796D8 /* _association */,
 				F55DE59B1AA3E8EA0037657D /* _structures */,
 				F55DE54F1AA3D57F0037657D /* _files */,
 				F55DE5451AA3D2060037657D /* _extensions */,
@@ -264,14 +265,6 @@
 				F55DE59C1AA3E8EA0037657D /* SFQueue.swift */,
 			);
 			path = _structures;
-			sourceTree = "<group>";
-		};
-		F5EA8BC91AB0A745002796D8 /* _association */ = {
-			isa = PBXGroup;
-			children = (
-				F5EA8BCA1AB0A755002796D8 /* SFAssociation.swift */,
-			);
-			path = _association;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +426,7 @@
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
 				F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */,
 				F5763ADD1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift in Sources */,
+				F5763AE31CBACBF7001B0660 /* ObservableTests.swift in Sources */,
 				F5763ADB1CBABAF4001B0660 /* EmailTests.swift in Sources */,
 				F5FA6BB81CB2E98E00C26252 /* UIColorSFRGBTests.swift in Sources */,
 				F539126D1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift in Sources */,
