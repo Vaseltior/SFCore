@@ -12,6 +12,7 @@
 		F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C441C62A8000034CCFD /* GCDTests.swift */; };
 		F5039C4B1C62AFDD0034CCFD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C4A1C62AFDD0034CCFD /* Settings.swift */; };
 		F5039C4E1C62B0C30034CCFD /* Settings+Texting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5039C4D1C62B0C30034CCFD /* Settings+Texting.swift */; };
+		F539126D1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539126C1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift */; };
 		F53955631C5D5E0200852A8D /* ObservablePropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */; };
 		F53955671C5D5FF600852A8D /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53955661C5D5FF600852A8D /* Email.swift */; };
 		F54CCDB51C5E12080089799E /* SGBufferedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */; };
@@ -32,7 +33,10 @@
 		F5DD48AE1C5AC436006D06E3 /* Double+ShortHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */; };
 		F5DD48B11C5AC460006D06E3 /* DoubleShortHandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */; };
 		F5EA8BCE1AB0A804002796D8 /* UIViewController+SFOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */; };
+		F5ED7C321CB96A4300D815B4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ED7C311CB96A4300D815B4 /* DateExtension.swift */; };
+		F5ED7C341CBA41A600D815B4 /* SFQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ED7C331CBA41A600D815B4 /* SFQueueTests.swift */; };
 		F5EDF04D1AC6F2A90071875D /* UIColor+SFRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */; };
+		F5FA6BB81CB2E98E00C26252 /* UIColorSFRGBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FA6BB71CB2E98E00C26252 /* UIColorSFRGBTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,7 @@
 		F5039C441C62A8000034CCFD /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
 		F5039C4A1C62AFDD0034CCFD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F5039C4D1C62B0C30034CCFD /* Settings+Texting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+Texting.swift"; sourceTree = "<group>"; };
+		F539126C1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateSFBeginEndTests.swift; sourceTree = "<group>"; };
 		F53955621C5D5E0100852A8D /* ObservablePropertyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertyProtocol.swift; sourceTree = "<group>"; };
 		F53955661C5D5FF600852A8D /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		F54CCDB41C5E12080089799E /* SGBufferedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGBufferedNavigationController.swift; sourceTree = "<group>"; };
@@ -75,7 +80,10 @@
 		F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleShortHandsTests.swift; sourceTree = "<group>"; };
 		F5EA8BCA1AB0A755002796D8 /* SFAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFAssociation.swift; sourceTree = "<group>"; };
 		F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SFOrientation.swift"; sourceTree = "<group>"; };
+		F5ED7C311CB96A4300D815B4 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F5ED7C331CBA41A600D815B4 /* SFQueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFQueueTests.swift; sourceTree = "<group>"; };
 		F5EDF04C1AC6F2A90071875D /* UIColor+SFRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SFRGB.swift"; sourceTree = "<group>"; };
+		F5FA6BB71CB2E98E00C26252 /* UIColorSFRGBTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorSFRGBTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +191,10 @@
 				F5B446C01C57F95400060453 /* SetSFCoreTests.swift */,
 				F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */,
 				F5039C441C62A8000034CCFD /* GCDTests.swift */,
+				F5FA6BB71CB2E98E00C26252 /* UIColorSFRGBTests.swift */,
+				F539126C1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift */,
+				F5ED7C311CB96A4300D815B4 /* DateExtension.swift */,
+				F5ED7C331CBA41A600D815B4 /* SFQueueTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -406,9 +418,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5DD48B11C5AC460006D06E3 /* DoubleShortHandsTests.swift in Sources */,
+				F5ED7C341CBA41A600D815B4 /* SFQueueTests.swift in Sources */,
+				F5ED7C321CB96A4300D815B4 /* DateExtension.swift in Sources */,
 				E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
 				F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */,
+				F5FA6BB81CB2E98E00C26252 /* UIColorSFRGBTests.swift in Sources */,
+				F539126D1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift in Sources */,
 				F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

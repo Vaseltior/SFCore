@@ -68,4 +68,14 @@ class StringSFCharactersTests: XCTestCase {
       XCTAssertTrue(NSNumber(double: 123.456).compare(decimalString.toNSNumber()) == NSComparisonResult.OrderedSame)
     }
   }
+
+  func testContains() {
+    let s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+    XCTAssertTrue(s.contains("Lorem"))
+    XCTAssertFalse(s.contains("toto"))
+    // Full range
+    XCTAssertTrue(s.contains(s))
+    // Empty
+    XCTAssertFalse(s.contains(""))
+  }
 }
