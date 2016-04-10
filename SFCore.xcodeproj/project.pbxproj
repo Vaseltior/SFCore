@@ -28,6 +28,8 @@
 		F55DE5AC1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */; };
 		F55DE5B21AA448940037657D /* Int+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B11AA448940037657D /* Int+SFBoundi.swift */; };
 		F55DE5B51AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
+		F5763ADB1CBABAF4001B0660 /* EmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADA1CBABAF4001B0660 /* EmailTests.swift */; };
+		F5763ADD1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */; };
 		F5B446BF1C57F93400060453 /* Set+SFCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446BE1C57F93400060453 /* Set+SFCore.swift */; };
 		F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446C01C57F95400060453 /* SetSFCoreTests.swift */; };
 		F5DD48AE1C5AC436006D06E3 /* Double+ShortHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */; };
@@ -74,6 +76,8 @@
 		F55DE5AB1AA3FD1B0037657D /* NSDate+SFBeginEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SFBeginEnd.swift"; sourceTree = "<group>"; };
 		F55DE5B11AA448940037657D /* Int+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+SFBoundi.swift"; sourceTree = "<group>"; };
 		F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt+SFBoundi.swift"; sourceTree = "<group>"; };
+		F5763ADA1CBABAF4001B0660 /* EmailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTests.swift; sourceTree = "<group>"; };
+		F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerOrientationsTests.swift; sourceTree = "<group>"; };
 		F5B446BE1C57F93400060453 /* Set+SFCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+SFCore.swift"; sourceTree = "<group>"; };
 		F5B446C01C57F95400060453 /* SetSFCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSFCoreTests.swift; sourceTree = "<group>"; };
 		F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ShortHands.swift"; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				F539126C1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift */,
 				F5ED7C311CB96A4300D815B4 /* DateExtension.swift */,
 				F5ED7C331CBA41A600D815B4 /* SFQueueTests.swift */,
+				F5763ADA1CBABAF4001B0660 /* EmailTests.swift */,
+				F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -423,6 +429,8 @@
 				E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
 				F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */,
+				F5763ADD1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift in Sources */,
+				F5763ADB1CBABAF4001B0660 /* EmailTests.swift in Sources */,
 				F5FA6BB81CB2E98E00C26252 /* UIColorSFRGBTests.swift in Sources */,
 				F539126D1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift in Sources */,
 				F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */,
