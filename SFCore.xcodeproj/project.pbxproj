@@ -30,6 +30,7 @@
 		F55DE5B51AA448B00037657D /* UInt+SFBoundi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */; };
 		F5763ADB1CBABAF4001B0660 /* EmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADA1CBABAF4001B0660 /* EmailTests.swift */; };
 		F5763ADD1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */; };
+		F5763ADF1CBABDA2001B0660 /* BoundiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */; };
 		F5B446BF1C57F93400060453 /* Set+SFCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446BE1C57F93400060453 /* Set+SFCore.swift */; };
 		F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446C01C57F95400060453 /* SetSFCoreTests.swift */; };
 		F5DD48AE1C5AC436006D06E3 /* Double+ShortHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */; };
@@ -78,6 +79,7 @@
 		F55DE5B41AA448B00037657D /* UInt+SFBoundi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt+SFBoundi.swift"; sourceTree = "<group>"; };
 		F5763ADA1CBABAF4001B0660 /* EmailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTests.swift; sourceTree = "<group>"; };
 		F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerOrientationsTests.swift; sourceTree = "<group>"; };
+		F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundiTests.swift; sourceTree = "<group>"; };
 		F5B446BE1C57F93400060453 /* Set+SFCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+SFCore.swift"; sourceTree = "<group>"; };
 		F5B446C01C57F95400060453 /* SetSFCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSFCoreTests.swift; sourceTree = "<group>"; };
 		F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ShortHands.swift"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				F5ED7C331CBA41A600D815B4 /* SFQueueTests.swift */,
 				F5763ADA1CBABAF4001B0660 /* EmailTests.swift */,
 				F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */,
+				F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				F5ED7C341CBA41A600D815B4 /* SFQueueTests.swift in Sources */,
 				F5ED7C321CB96A4300D815B4 /* DateExtension.swift in Sources */,
 				E15CE6571C47A74D002DB16A /* String+SFCharactersTests.swift in Sources */,
+				F5763ADF1CBABDA2001B0660 /* BoundiTests.swift in Sources */,
 				F55DE5381AA351D20037657D /* SFCoreTests.swift in Sources */,
 				F5039C451C62A8000034CCFD /* GCDTests.swift in Sources */,
 				F5763ADD1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift in Sources */,
