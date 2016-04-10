@@ -121,10 +121,7 @@ public class SFFileManager : SFFileManagerProtocol {
     } catch let error1 as NSError {
       error = error1
     }
-    if let theError = error {
-      return theError
-    }
-    return nil
+    return error
   }
 
   ///

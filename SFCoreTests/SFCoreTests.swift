@@ -25,6 +25,20 @@ class SFCoreTests: XCTestCase {
   func testExample() {
     // This is an example of a functional test case.
     XCTAssert(true, "Pass")
+    SFFileManager.createDirectoryInDocumentsDirectory("555")
+    let dd = SFFileManager.documentsDirectory() + "/555/file.txt"
+    let data = "here".dataUsingEncoding(NSUTF8StringEncoding)!
+    XCTAssertTrue(SFFileManager.createFileAtPath(data, atPath: dd))
+    XCTAssertFalse(SFFileManager.createFileAtPath(data, atPath: ""))
+    XCTAssertEqual(SFFileManager.contentOfFileAtPath(dd), "here")
+    XCTAssertNil(SFFileManager.removeFileAtPath(dd))
+    XCTAssertNotNil(SFFileManager.removeFileAtPath(dd))
+    XCTAssertEqual(SFFileManager.contentOfFileAtPath(dd), "")
+
+    SFFileManager.mainBundleDirectory()
+    SFFileManager.temporaryDirectory()
+    SFFileManager.cachesDirectory()
+    SFFileManager.userFile()
   }
   
   func testPerformanceExample() {

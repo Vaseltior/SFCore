@@ -31,6 +31,10 @@ class ArrayTests: XCTestCase {
     XCTAssertTrue(Array<Int>.isSortedAscendingly(a))
     let b = [1,5,1,9,11]
     XCTAssertFalse(Array<Int>.isSortedAscendingly(b))
+
+    let c: Array<Int> = []
+    XCTAssertNil(c.sfFirstObject())
+    XCTAssertNil(c.sfLastObject())
   }
 
 }
