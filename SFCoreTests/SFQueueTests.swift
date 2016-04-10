@@ -11,9 +11,13 @@ import XCTest
 
 class SFQueueTests: XCTestCase {
 
+  var queue3: SFQueue<String>!
+  var queue4: SFQueue<String>!
+
   override func setUp() {
     super.setUp()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.queue3 = SFQueue<String>()
+    self.queue4 = SFQueue<String>()
   }
 
   override func tearDown() {
@@ -21,15 +25,30 @@ class SFQueueTests: XCTestCase {
     super.tearDown()
   }
 
-  func testExample() {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+  func testFIFO() {
+    self.queue4.enQueue("Dave Dee")
+    self.queue4.enQueue("Dozy")
+    self.queue4.enQueue("Beaky")
+    XCTAssertEqual(self.queue4.deQueue(), "Dave Dee")
+    XCTAssertEqual(self.queue4.deQueue(), "Dozy")
+    XCTAssertEqual(self.queue4.deQueue(), "Beaky")
   }
 
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measureBlock {
-      // Put the code you want to measure the time of here.
-    }
+  func testNilDequeue() {
+    XCTAssertTrue(self.queue4.isEmpty())
+    XCTAssertNil(self.queue4.peek())
+    XCTAssertNil(self.queue4.deQueue())
+    XCTAssertTrue(self.queue4.isEmpty())
+  }
+
+  func testNotNilDequeue() {
+    self.queue4.enQueue("Dave Dee")
+    self.queue4.enQueue("Dozy")
+    self.queue4.enQueue("Beaky")
+
+    XCTAssertFalse(self.queue4.isEmpty())
+    XCTAssertNotNil(self.queue4.peek())
+    XCTAssertNotNil(self.queue4.deQueue())
+    XCTAssertFalse(self.queue4.isEmpty())
   }
 }

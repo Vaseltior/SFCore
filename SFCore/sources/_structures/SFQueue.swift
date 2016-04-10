@@ -43,9 +43,9 @@ public class SFQueue<T> {
   public func enQueue(key: T) {
 
     // check for the instance
-    if (top == nil) {
+    /*if (top == nil) {
       top = SFQNode()
-    }
+    }*/
 
     // establish the top node
     if (top.key == nil) {
@@ -94,13 +94,13 @@ public class SFQueue<T> {
     // determine if the key or instance exist</span>
     if let _: T = self.top?.key {
       return false
-    } else {
-      return true
     }
+
+    return true
   }
 
   // retrieve the top most item</span>
   public func peek() -> T? {
-    return top.key!
+    return top.key ?? nil
   }
 }
