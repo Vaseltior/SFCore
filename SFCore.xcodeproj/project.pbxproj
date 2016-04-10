@@ -31,7 +31,7 @@
 		F5763ADB1CBABAF4001B0660 /* EmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADA1CBABAF4001B0660 /* EmailTests.swift */; };
 		F5763ADD1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */; };
 		F5763ADF1CBABDA2001B0660 /* BoundiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */; };
-		F5B446BF1C57F93400060453 /* Set+SFCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446BE1C57F93400060453 /* Set+SFCore.swift */; };
+		F5763AE11CBABF52001B0660 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5763AE01CBABF52001B0660 /* ArrayTests.swift */; };
 		F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B446C01C57F95400060453 /* SetSFCoreTests.swift */; };
 		F5DD48AE1C5AC436006D06E3 /* Double+ShortHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */; };
 		F5DD48B11C5AC460006D06E3 /* DoubleShortHandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */; };
@@ -80,7 +80,7 @@
 		F5763ADA1CBABAF4001B0660 /* EmailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTests.swift; sourceTree = "<group>"; };
 		F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerOrientationsTests.swift; sourceTree = "<group>"; };
 		F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundiTests.swift; sourceTree = "<group>"; };
-		F5B446BE1C57F93400060453 /* Set+SFCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+SFCore.swift"; sourceTree = "<group>"; };
+		F5763AE01CBABF52001B0660 /* ArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		F5B446C01C57F95400060453 /* SetSFCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSFCoreTests.swift; sourceTree = "<group>"; };
 		F5DD48AD1C5AC436006D06E3 /* Double+ShortHands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ShortHands.swift"; sourceTree = "<group>"; };
 		F5DD48B01C5AC460006D06E3 /* DoubleShortHandsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleShortHandsTests.swift; sourceTree = "<group>"; };
@@ -204,6 +204,7 @@
 				F5763ADA1CBABAF4001B0660 /* EmailTests.swift */,
 				F5763ADC1CBABC72001B0660 /* UIViewControllerOrientationsTests.swift */,
 				F5763ADE1CBABDA2001B0660 /* BoundiTests.swift */,
+				F5763AE01CBABF52001B0660 /* ArrayTests.swift */,
 			);
 			path = SFCoreTests;
 			sourceTree = "<group>";
@@ -235,7 +236,6 @@
 		F55DE5451AA3D2060037657D /* _extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F5B446BE1C57F93400060453 /* Set+SFCore.swift */,
 				F5EA8BCD1AB0A804002796D8 /* UIViewController+SFOrientation.swift */,
 				F55DE5461AA3D2060037657D /* Array+SG.swift */,
 				F55DE54C1AA3D47B0037657D /* String+SFCharacters.swift */,
@@ -412,7 +412,6 @@
 				F55DE5521AA3D57F0037657D /* SFFileManager.swift in Sources */,
 				F5DD48AE1C5AC436006D06E3 /* Double+ShortHands.swift in Sources */,
 				F55DE5541AA3D57F0037657D /* SFFileManagerProtocol.swift in Sources */,
-				F5B446BF1C57F93400060453 /* Set+SFCore.swift in Sources */,
 				F53955671C5D5FF600852A8D /* Email.swift in Sources */,
 				F5039C4E1C62B0C30034CCFD /* Settings+Texting.swift in Sources */,
 				F55DE54D1AA3D47B0037657D /* String+SFCharacters.swift in Sources */,
@@ -437,6 +436,7 @@
 				F5763ADB1CBABAF4001B0660 /* EmailTests.swift in Sources */,
 				F5FA6BB81CB2E98E00C26252 /* UIColorSFRGBTests.swift in Sources */,
 				F539126D1CB821D70056F1F8 /* NSDateSFBeginEndTests.swift in Sources */,
+				F5763AE11CBABF52001B0660 /* ArrayTests.swift in Sources */,
 				F5B446C11C57F95400060453 /* SetSFCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

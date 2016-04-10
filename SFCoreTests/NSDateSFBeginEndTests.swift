@@ -75,4 +75,27 @@ class NSDateSFBeginEndTests: XCTestCase {
     XCTAssertNotNil(r)
     r!.dateXCAssert(2016, month: 12, day: 31, hour: 23, minute: 59, second: 59)
   }
+
+  func testYearInSeconds() {
+    XCTAssertEqual(NSDate.sfYearInSeconds(), 31536000)
+  }
+
+  func testNumberOfDaysBetweenDates() {
+    let d1 = NSDate(timeIntervalSince1970: 0)
+    var d2 = NSDate(timeIntervalSince1970: 8600)
+    XCTAssertEqual(NSDate.sfNumberOfDaysBetween(d1, endDate: d2), 0)
+    d2 = NSDate(timeIntervalSince1970: 86400)
+    XCTAssertEqual(NSDate.sfNumberOfDaysBetween(d1, endDate: d2), 1)
+  }
+
+  func testComparisons() {
+    let d1 = NSDate(timeIntervalSince1970: 0)
+    var d2 = NSDate(timeIntervalSince1970: 8600)
+    XCTAssertFalse(d1 == d2)
+    XCTAssertTrue(d1 < d2)
+    XCTAssertTrue(d2 > d1)
+    d2 = NSDate(timeIntervalSince1970: 0)
+    XCTAssertTrue(d1 == d2)
+    XCTAssertTrue(d1 <= d2)
+  }
 }

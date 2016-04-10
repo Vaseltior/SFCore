@@ -84,9 +84,9 @@ extension Array {
   ///
   /// - returns: true if the array contains the object, else returns false.
   ///
-  func contains<T : Equatable>(obj: T) -> Bool {
+  /*func contains<T : Equatable>(obj: T) -> Bool {
     return self.filter({$0 as? T == obj}).count > 0
-  }
+  }*/
   
   ///
   /// Simple function that tell if the array is sorted.
