@@ -37,17 +37,17 @@ public protocol Disposable {
  */
 public class Event<T> {
   public init() {}
-  public typealias EventHandler = T -> ()
+  public typealias EventHandler = (T) -> ()
   
   private var eventHandlers = [Invocable]()
   
-  public func raise(data: T) {
+  public func raise(_ data: T) {
     self.eventHandlers.forEach {
       $0.invoke(data)
     }
   }
   
-  public func addHandler<U: AnyObject>(target: U, handler: (U) -> EventHandler) -> Disposable {
+  public func addHandler<U: AnyObject>(_ target: U, handler: (U) -> EventHandler) -> Disposable {
     let wrapper = EventHandlerWrapper(target: target, handler: handler, event: self)
     eventHandlers.append(wrapper)
     return wrapper
@@ -56,22 +56,22 @@ public class Event<T> {
 
 /// Protocol for things that are invacable
 private protocol Invocable: class {
-  func invoke(data: Any)
+  func invoke(_ data: Any)
 }
 
 /// A wrapper for
 private class EventHandlerWrapper<T: AnyObject, U>: Invocable, Disposable {
   weak var target: T?
-  let handler: T -> U -> ()
+  let handler: (T) -> (U) -> ()
   let event: Event<U>
   
-  init(target: T?, handler: T -> U -> (), event: Event<U>) {
+  init(target: T?, handler: (T) -> (U) -> (), event: Event<U>) {
     self.target = target
     self.handler = handler
     self.event = event
   }
   
-  func invoke(data: Any) -> () {
+  func invoke(_ data: Any) -> () {
     if let t = target {
       handler(t)(data as! U)
     }

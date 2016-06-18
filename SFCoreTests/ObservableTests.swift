@@ -11,7 +11,7 @@ import XCTest
 
 /// Used to raise events for the observable property protocol
 enum ApplicationDataProperty {
-  case LoggedCurrentUser
+  case loggedCurrentUser
 }
 
 class ObservableTests: XCTestCase {
@@ -31,7 +31,7 @@ class ObservableTests: XCTestCase {
 
   var loggedCurrentUser: Bool = false {
     didSet {
-      self.propertyChanged.raise(ApplicationDataProperty.LoggedCurrentUser, oldValue as Any)
+      self.propertyChanged.raise(ApplicationDataProperty.loggedCurrentUser, oldValue as Any)
     }
   }
 
@@ -43,7 +43,7 @@ class ObservableTests: XCTestCase {
     XCTAssertTrue(self.circuitCalled)
   }
 
-  func onPropertyChanged(property: ApplicationDataProperty, oldValue: Any) {
+  func onPropertyChanged(_ property: ApplicationDataProperty, oldValue: Any) {
     self.circuitCalled = true
   }
 }

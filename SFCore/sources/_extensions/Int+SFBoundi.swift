@@ -32,7 +32,7 @@
 import Foundation
 
 extension Int {
-  public static func boundi(value: Int, min: Int, max: Int) -> Int {
+  public static func boundi(_ value: Int, min: Int, max: Int) -> Int {
     var iMax = max
     if (max < min) {
       iMax = min

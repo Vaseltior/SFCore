@@ -9,12 +9,12 @@
 import Foundation
 import XCTest
 
-extension NSDate {
-  public final func dateXCAssert(year: Int, month: Int, day: Int, hour: Int = 0, minute: Int = 0, second: Int = 0) {
-    let calendar = NSCalendar.autoupdatingCurrentCalendar()
+extension Date {
+  public func dateXCAssert(_ year: Int, month: Int, day: Int, hour: Int = 0, minute: Int = 0, second: Int = 0) {
+    let calendar = Calendar.autoupdatingCurrent()
     let components = calendar.components(
-      [.Year, .Month, .Day, .Hour, .Minute, .Second],
-      fromDate: self
+      [.year, .month, .day, .hour, .minute, .second],
+      from: self
     )
     XCTAssertEqual(components.year, year)
     XCTAssertEqual(components.month, month)

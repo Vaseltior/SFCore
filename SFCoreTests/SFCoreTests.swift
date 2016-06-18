@@ -27,7 +27,7 @@ class SFCoreTests: XCTestCase {
     XCTAssert(true, "Pass")
     SFFileManager.createDirectoryInDocumentsDirectory("555")
     let dd = SFFileManager.documentsDirectory() + "/555/file.txt"
-    let data = "here".dataUsingEncoding(NSUTF8StringEncoding)!
+    let data = "here".data(using: String.Encoding.utf8)!
     XCTAssertTrue(SFFileManager.createFileAtPath(data, atPath: dd))
     XCTAssertFalse(SFFileManager.createFileAtPath(data, atPath: ""))
     XCTAssertEqual(SFFileManager.contentOfFileAtPath(dd), "here")
@@ -43,7 +43,7 @@ class SFCoreTests: XCTestCase {
   
   func testPerformanceExample() {
     // This is an example of a performance test case.
-    self.measureBlock() {
+    self.measure() {
       // Put the code you want to measure the time of here.
     }
   }

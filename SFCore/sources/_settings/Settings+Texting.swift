@@ -14,11 +14,11 @@ private let kSchemeSMS = "sms://"
 
 extension SettingsHelper {
   
-  private static func sanitizedPhoneNumberFromString(phoneNumber: String) -> String {
+  private static func sanitizedPhoneNumberFromString(_ phoneNumber: String) -> String {
     return phoneNumber
   }
   
-  public static func SMS(number: String? = nil) throws -> Bool {
+  public static func SMS(_ number: String? = nil) throws -> Bool {
     let sanitizedNumber = SettingsHelper.sanitizedPhoneNumberFromString(number ?? "")
     let URLString = kSchemeSMS + sanitizedNumber
     return try SettingsHelper.buildAndOpenURL(URLString)

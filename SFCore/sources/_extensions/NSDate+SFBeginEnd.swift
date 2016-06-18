@@ -31,30 +31,30 @@
 
 import Foundation
 
-extension NSDate {
+extension Date {
 
   // MARK: Calculate Beginning / End of Day
 
 
-  public final func sfBeginningOfDay() -> NSDate? {
-    let calendar = NSCalendar.currentCalendar()
-    let components: NSDateComponents = calendar.components(
-      [NSCalendarUnit.Year,NSCalendarUnit.Month,NSCalendarUnit.Day],
-      fromDate: self
+  public func sfBeginningOfDay() -> Date? {
+    let calendar = Calendar.current()
+    let components: DateComponents = calendar.components(
+      [Calendar.Unit.year,Calendar.Unit.month,Calendar.Unit.day],
+      from: self
     )
-    return calendar.dateFromComponents(components)
+    return calendar.date(from: components)
   }
 
-  public final func sfEndOfDay() -> NSDate? {
-    let calendar = NSCalendar.currentCalendar()
-    let components: NSDateComponents = NSDateComponents()
+  public func sfEndOfDay() -> Date? {
+    let calendar = Calendar.current()
+    var components: DateComponents = DateComponents()
     components.day = 1
     if let beginningOfDay = self.sfBeginningOfDay() {
-      return calendar.dateByAddingComponents(
-        components,
-        toDate: beginningOfDay,
-        options: NSCalendarOptions.MatchStrictly
-        )?.dateByAddingTimeInterval(-1)
+      return calendar.date(
+        byAdding: components,
+        to: beginningOfDay,
+        options: Calendar.Options.matchStrictly
+        )?.addingTimeInterval(-1)
     }
     return nil
   }
@@ -62,30 +62,30 @@ extension NSDate {
   // MARK: Calculate Beginning / End of Week
 
 
-  public final func sfBeginningOfWeek(calendar: NSCalendar = NSCalendar.currentCalendar()) -> NSDate? {
+  public func sfBeginningOfWeek(_ calendar: Calendar = Calendar.current()) -> Date? {
     let componentsCurrentDate = calendar.components(
-      [.Year, .Month, .Day, .Weekday, .WeekOfMonth],
-      fromDate: self
+      [.year, .month, .day, .weekday, .weekOfMonth],
+      from: self
     )
-    let componentsNewDate = NSDateComponents()
+    var componentsNewDate = DateComponents()
     componentsNewDate.year = componentsCurrentDate.year
     componentsNewDate.month = componentsCurrentDate.month
     componentsNewDate.weekOfMonth = componentsCurrentDate.weekOfMonth
     componentsNewDate.weekday = calendar.firstWeekday
 
-    return calendar.dateFromComponents(componentsNewDate)!
+    return calendar.date(from: componentsNewDate)!
   }
 
-  public final func sfEndOfWeek() -> NSDate? {
-    let calendar = NSCalendar.currentCalendar()
-    let components: NSDateComponents = NSDateComponents()
+  public func sfEndOfWeek() -> Date? {
+    let calendar = Calendar.current()
+    var components: DateComponents = DateComponents()
     components.weekOfMonth = 1
     if let beginningOfWeek = self.sfBeginningOfWeek() {
-      return calendar.dateByAddingComponents(
-        components,
-        toDate: beginningOfWeek,
-        options: NSCalendarOptions.MatchStrictly
-        )?.dateByAddingTimeInterval(-1)
+      return calendar.date(
+        byAdding: components,
+        to: beginningOfWeek,
+        options: Calendar.Options.matchStrictly
+        )?.addingTimeInterval(-1)
     }
     return nil
   }
@@ -94,25 +94,25 @@ extension NSDate {
   // MARK: Calculate Beginning / End of Month
 
 
-  public final func sfBeginningOfMonth() -> NSDate? {
-    let calendar = NSCalendar.currentCalendar()
-    let components: NSDateComponents = calendar.components(
-      [NSCalendarUnit.Year,NSCalendarUnit.Month],
-      fromDate: self
+  public func sfBeginningOfMonth() -> Date? {
+    let calendar = Calendar.current()
+    let components: DateComponents = calendar.components(
+      [Calendar.Unit.year,Calendar.Unit.month],
+      from: self
     )
-    return calendar.dateFromComponents(components)
+    return calendar.date(from: components)
   }
 
-  public final func sfEndOfMonth() -> NSDate? {
-    let calendar = NSCalendar.currentCalendar()
-    let components: NSDateComponents = NSDateComponents()
+  public func sfEndOfMonth() -> Date? {
+    let calendar = Calendar.current()
+    var components: DateComponents = DateComponents()
     components.month = 1
     if let beginningOfMonth = self.sfBeginningOfMonth() {
-      return calendar.dateByAddingComponents(
-        components,
-        toDate: beginningOfMonth,
-        options: NSCalendarOptions.MatchStrictly
-        )?.dateByAddingTimeInterval(-1)
+      return calendar.date(
+        byAdding: components,
+        to: beginningOfMonth,
+        options: Calendar.Options.matchStrictly
+        )?.addingTimeInterval(-1)
     }
     return nil
   }
@@ -120,26 +120,26 @@ extension NSDate {
   // MARK: Calculate Beginning / End of Year
 
 
-  public final func sfBeginningOfYear() -> NSDate? {
-    let calendar = NSCalendar.currentCalendar()
-    let components: NSDateComponents = calendar.components(
-      NSCalendarUnit.Year,
-      fromDate: self
+  public func sfBeginningOfYear() -> Date? {
+    let calendar = Calendar.current()
+    let components: DateComponents = calendar.components(
+      Calendar.Unit.year,
+      from: self
     )
-    return calendar.dateFromComponents(components)
+    return calendar.date(from: components)
 
   }
 
-  public final func sfEndOfYear() -> NSDate? {
-    let calendar = NSCalendar.currentCalendar()
-    let components: NSDateComponents = NSDateComponents()
+  public func sfEndOfYear() -> Date? {
+    let calendar = Calendar.current()
+    var components: DateComponents = DateComponents()
     components.year = 1
     if let beginningOfYear = self.sfBeginningOfYear() {
-      return calendar.dateByAddingComponents(
-        components,
-        toDate: beginningOfYear,
-        options: NSCalendarOptions.MatchStrictly
-        )?.dateByAddingTimeInterval(-1)
+      return calendar.date(
+        byAdding: components,
+        to: beginningOfYear,
+        options: Calendar.Options.matchStrictly
+        )?.addingTimeInterval(-1)
     }
     return nil
   }

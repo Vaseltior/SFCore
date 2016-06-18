@@ -38,8 +38,8 @@ extension String {
   ///
   /// - returns: The string describing the character at index `i`.
   ///
-  public func getCharacter(index: Int) -> Character {
-    return self[self.startIndex.advancedBy(index)]
+  public func getCharacter(_ index: Int) -> Character {
+    return self[self.characters.index(self.startIndex, offsetBy: index)]
   }
   
   ///
@@ -57,18 +57,18 @@ extension String {
   ///
   ///
   ///
-  public func characterString(index: Int) -> String {
+  public func characterString(_ index: Int) -> String {
     return self[index] //String(self.getCharacter(i) as Character)
   }
   
   public var capitalizeFirst: String {
     var result = self
-    result.replaceRange(startIndex...startIndex, with: String(self[startIndex]).capitalizedString)
+    result.replaceSubrange(startIndex...startIndex, with: String(self[startIndex]).capitalized)
     return result
   }
   
   public var trim: String {
-    return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
   }
   
   /**
@@ -78,9 +78,9 @@ extension String {
    */
   public func toNSNumber() -> NSNumber {
     // If the initial value is 0.00, we should clear the value to simplify the user experience
-    let formatter: NSNumberFormatter = NSNumberFormatter()
-    formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
-    return formatter.numberFromString(self) ?? NSNumber(double: 0)
+    let formatter: NumberFormatter = NumberFormatter()
+    formatter.numberStyle = NumberFormatter.Style.decimal
+    return formatter.number(from: self) ?? NSNumber(value: 0)
   }
   
   /**
@@ -90,8 +90,8 @@ extension String {
    
    - returns: returns `true` if the needle string is found in the haystack `self`, otherwise, returns `false`.
    */
-  public func contains(find: String) -> Bool {
-    return self.rangeOfString(find) != nil
-  }
+  /*public func contains(_ find: String) -> Bool {
+    return self.range(of: find) != nil
+  }*/
   
 }

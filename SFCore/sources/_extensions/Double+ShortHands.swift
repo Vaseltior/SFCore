@@ -19,7 +19,7 @@ extension Double {
    
    - returns: The rounded value of the double
    */
-  public func roundToPlaces(places: Int) -> Double {
+  public func roundToPlaces(_ places: Int) -> Double {
     let divisor = 10^Double(places)
     return round(self * divisor) / divisor
   }

@@ -24,7 +24,7 @@ class UIViewControllerOrientationsTests: XCTestCase {
   }
 
   func testNotificationReaction() {
-    let n = NSNotification(name: UIDeviceOrientationDidChangeNotification, object: self)
-    NSNotificationCenter.defaultCenter().postNotification(n)
+    let n = Notification(name: NSNotification.Name.UIDeviceOrientationDidChange, object: self)
+    NotificationCenter.default().post(n)
   }
 }

@@ -40,7 +40,7 @@ public class SFQueue<T> {
   private var top: SFQNode<T>! = SFQNode<T>()
 
   // enqueue the specified object
-  public func enQueue(key: T) {
+  public func enQueue(_ key: T) {
 
     // check for the instance
     /*if (top == nil) {

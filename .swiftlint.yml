@@ -8,6 +8,7 @@ disabled_rules: # rule identifiers to exclude from running
   - legacy_constructor
   - file_length 
   - trailing_whitespace
+  - type_name
   # Find all the available rules by running:
   # swiftlint rules
 
