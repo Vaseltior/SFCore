@@ -14,14 +14,10 @@ import Foundation
  - parameter delay:   The delay
  - parameter closure: The closure to execute
  */
-public func gcdDelay(delay:Double, closure: ()->()) {
-  dispatch_after(
-    dispatch_time(
-      DISPATCH_TIME_NOW,
-      Int64(delay * Double(NSEC_PER_SEC))
-    ),
-    dispatch_get_main_queue(),
-    closure
+public func gcdDelay(_ delay:Double, closure: ()->()) {
+  DispatchQueue.main.after(
+    when: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC),
+    execute: closure
   )
 }
 
@@ -30,8 +26,8 @@ public func gcdDelay(delay:Double, closure: ()->()) {
  
  - parameter closure: The closure to execute
  */
-public func gcdMainThread(closure: ()->()) {
-  dispatch_async(dispatch_get_main_queue(), { () -> Void in
+public func gcdMainThread(_ closure: ()->()) {
+  DispatchQueue.main.async(execute: { () -> Void in
     closure()
   })
 }

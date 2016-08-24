@@ -25,11 +25,25 @@ class SFCoreTests: XCTestCase {
   func testExample() {
     // This is an example of a functional test case.
     XCTAssert(true, "Pass")
+    SFFileManager.createDirectoryInDocumentsDirectory("555")
+    let dd = SFFileManager.documentsDirectory() + "/555/file.txt"
+    let data = "here".data(using: String.Encoding.utf8)!
+    XCTAssertTrue(SFFileManager.createFileAtPath(data, atPath: dd))
+    XCTAssertFalse(SFFileManager.createFileAtPath(data, atPath: ""))
+    XCTAssertEqual(SFFileManager.contentOfFileAtPath(dd), "here")
+    XCTAssertNil(SFFileManager.removeFileAtPath(dd))
+    XCTAssertNotNil(SFFileManager.removeFileAtPath(dd))
+    XCTAssertEqual(SFFileManager.contentOfFileAtPath(dd), "")
+
+    SFFileManager.mainBundleDirectory()
+    SFFileManager.temporaryDirectory()
+    SFFileManager.cachesDirectory()
+    SFFileManager.userFile()
   }
   
   func testPerformanceExample() {
     // This is an example of a performance test case.
-    self.measureBlock() {
+    self.measure() {
       // Put the code you want to measure the time of here.
     }
   }

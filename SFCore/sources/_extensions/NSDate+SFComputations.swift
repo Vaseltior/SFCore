@@ -31,14 +31,14 @@
 
 import Foundation
 
-extension NSDate {
+extension Date {
   
   ///
   /// Returns the number of seconds in one year
   ///
   /// - returns: the number of of seconds in one year
   ///
-  public class func sfYearInSeconds() -> NSTimeInterval {
+  public static func sfYearInSeconds() -> TimeInterval {
     return 365 * (60 * 60 * 24)
   }
   
@@ -50,35 +50,17 @@ extension NSDate {
   ///
   /// - returns: the number of days between two dates
   ///
-  public class func sfNumberOfDaysBetween(startDate: NSDate, endDate: NSDate) -> Int {
+  public static func sfNumberOfDaysBetween(_ startDate: Date, endDate: Date) -> Int {
     precondition(startDate <= endDate, "startDate should be less than endDate")
-    let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier:NSCalendarIdentifierGregorian)!
-    let components: NSDateComponents = gregorianCalendar.components(
-      NSCalendarUnit.Day,
-      fromDate: startDate,
-      toDate: endDate,
-      options: NSCalendarOptions.MatchStrictly
+    let gregorianCalendar: Calendar = Calendar(calendarIdentifier:Calendar.Identifier.gregorian)!
+    let components: DateComponents = gregorianCalendar.components(
+      Calendar.Unit.day,
+      from: startDate,
+      to: endDate,
+      options: Calendar.Options.matchStrictly
     )
-    return components.day
+    return components.day!
   }
 }
 
 /// MARK: - Comparable -
-
-extension NSDate {}
-
-public func == (lhs: NSDate, rhs: NSDate) -> Bool {
-  return lhs === rhs || lhs.compare(rhs) == .OrderedSame
-}
-
-public func < (lhs: NSDate, rhs: NSDate) -> Bool {
-  return lhs.compare(rhs) == .OrderedAscending
-}
-
-public func <= (lhs: NSDate, rhs: NSDate) -> Bool {
-  return lhs < rhs || lhs.compare(rhs) == .OrderedAscending
-}
-
-public func > (lhs: NSDate, rhs: NSDate) -> Bool {
-  return lhs.compare(rhs) == .OrderedDescending
-}

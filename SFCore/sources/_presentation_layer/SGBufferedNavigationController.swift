@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let bufferedNavigationQueue = dispatch_queue_create("com.vaseltior.BufferedNavigationQueue", nil)
+let bufferedNavigationQueue = DispatchQueue(label: "com.vaseltior.BufferedNavigationQueue", attributes: [])
 
 typealias SGBCodeBlock = (Void) -> (Void)
 
@@ -41,52 +41,52 @@ public class SGBufferedNavigationController: UINavigationController, UINavigatio
   
   // MARK: - Overrides
   
-  override public func popViewControllerAnimated(animated: Bool) -> UIViewController? {
+  override public func popViewController(animated: Bool) -> UIViewController? {
     var result: UIViewController? = nil
     
-    dispatch_sync(bufferedNavigationQueue) {
+    bufferedNavigationQueue.sync {
       if self.isTransitioning {
         self.queue.append({
-          super.popViewControllerAnimated(animated)
+          super.popViewController(animated: animated)
         })
         
         // We cannot show what viewcontroller is currently animated now
         result = nil
         
       } else {
-        result = super.popViewControllerAnimated(animated)
+        result = super.popViewController(animated: animated)
       }
     }
     
     return result
   }
   
-  public override func popToRootViewControllerAnimated(animated: Bool) -> [UIViewController]? {
+  public override func popToRootViewController(animated: Bool) -> [UIViewController]? {
     var result: [UIViewController]? = nil
     
     //
-    dispatch_sync(bufferedNavigationQueue) {
+    bufferedNavigationQueue.sync {
       if self.isTransitioning {
         self.queue.append({
-          super.popToRootViewControllerAnimated(animated)
+          super.popToRootViewController(animated: animated)
         })
         
         // We cannot show what viewcontroller is currently animated now
         result = nil
         
       } else {
-        result = super.popToRootViewControllerAnimated(animated)
+        result = super.popToRootViewController(animated: animated)
       }
     }
     
     return result
   }
   
-  public override func popToViewController(viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+  public func pop(to viewController: UIViewController, animated: Bool) -> [UIViewController]? {
     var result: [UIViewController]? = nil
     
     //
-    dispatch_sync(bufferedNavigationQueue) {
+    bufferedNavigationQueue.sync {
       if self.isTransitioning {
         self.queue.append({
           super.popToViewController(viewController, animated: animated)
@@ -103,9 +103,9 @@ public class SGBufferedNavigationController: UINavigationController, UINavigatio
     return result
   }
   
-  public override func setViewControllers(viewControllers: [UIViewController], animated: Bool) {
+  public override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
     //
-    dispatch_sync(bufferedNavigationQueue) {
+    bufferedNavigationQueue.sync {
       if self.isTransitioning {
         self.queue.append({
           super.setViewControllers(viewControllers, animated: animated)
@@ -117,8 +117,8 @@ public class SGBufferedNavigationController: UINavigationController, UINavigatio
     }
   }
   
-  public override func pushViewController(viewController: UIViewController, animated: Bool) {
-    dispatch_sync(bufferedNavigationQueue) {
+  public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    bufferedNavigationQueue.sync {
       if self.isTransitioning {
         self.queue.append({
           super.pushViewController(viewController, animated: animated)
@@ -133,20 +133,20 @@ public class SGBufferedNavigationController: UINavigationController, UINavigatio
   // MARK: - UINavigationControllerDelegate
   
   public func navigationController(
-    navigationController: UINavigationController,
-    willShowViewController viewController: UIViewController,
+    _ navigationController: UINavigationController,
+    willShow viewController: UIViewController,
     animated: Bool) {
       
-      dispatch_sync(bufferedNavigationQueue) {
+      bufferedNavigationQueue.sync {
         self.isTransitioning = true
         
         guard let transitionCoordinator = navigationController.topViewController?.transitionCoordinator() else {
           return
         }
         
-        transitionCoordinator.notifyWhenInteractionEndsUsingBlock({ (context: UIViewControllerTransitionCoordinatorContext) -> Void in
+        transitionCoordinator.notifyWhenInteractionEnds({ (context: UIViewControllerTransitionCoordinatorContext) -> Void in
           if context.isCancelled() {
-            dispatch_sync(bufferedNavigationQueue) {
+            bufferedNavigationQueue.sync {
               self.isTransitioning = false
             }
           }
@@ -155,11 +155,11 @@ public class SGBufferedNavigationController: UINavigationController, UINavigatio
   }
   
   public func navigationController(
-    navigationController: UINavigationController,
-    didShowViewController viewController: UIViewController,
+    _ navigationController: UINavigationController,
+    didShow viewController: UIViewController,
     animated: Bool) {
       
-      dispatch_sync(bufferedNavigationQueue) {
+      bufferedNavigationQueue.sync {
         self.isTransitioning = false
         self.runNextBlock()
       }
@@ -172,8 +172,8 @@ public class SGBufferedNavigationController: UINavigationController, UINavigatio
   
   - parameter codeBlock: The code block to queue
   */
-  private func pushCodeBlock(codeBlock: SGBCodeBlock) {
-    dispatch_sync(bufferedNavigationQueue) {
+  private func pushCodeBlock(_ codeBlock: SGBCodeBlock) {
+    bufferedNavigationQueue.sync {
       self.queue.append(codeBlock)
       if !self.isTransitioning {
         self.runNextBlock()

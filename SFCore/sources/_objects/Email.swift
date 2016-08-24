@@ -14,7 +14,7 @@ import Foundation
  *  A simple Email class that is able to validate correctly an Email
  */
 public class Email: CustomStringConvertible {
-  var emailString: String? = nil
+  var emailString: String!
   
   // MARK: - Initialization
   
@@ -26,7 +26,7 @@ public class Email: CustomStringConvertible {
   - returns: an Email object
   */
   public init(email: String) {
-    self.emailString = email.lowercaseString
+    self.emailString = email.lowercased()
   }
   
   // MARK: - Email validation functions
@@ -37,10 +37,6 @@ public class Email: CustomStringConvertible {
   - returns: true if the email is valid, otherwise false
   */
   public func isValidEmail() -> Bool {
-    guard let emailString = self.emailString else {
-      return false
-    }
-    
     let emailRegEx =
     "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}" +
       "~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\" +
@@ -50,8 +46,8 @@ public class Email: CustomStringConvertible {
       "9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21" +
     "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
     
-    let regExPredicate = NSPredicate(format:"%@ MATCHES %@", emailString, emailRegEx)
-    return regExPredicate.evaluateWithObject(self)
+    let regExPredicate = Predicate(format:"%@ MATCHES %@", self.emailString, emailRegEx)
+    return regExPredicate.evaluate(with: self)
   }
   
   /**
@@ -61,7 +57,7 @@ public class Email: CustomStringConvertible {
    
    - returns: true if the email is valid, otherwise false
    */
-  public static func isValidEmailString(emailString: String) -> Bool {
+  public static func isValidEmailString(_ emailString: String) -> Bool {
     return Email(email: emailString).isValidEmail()
   }
   
@@ -69,6 +65,6 @@ public class Email: CustomStringConvertible {
   
   /// A textual representation of `self`.
   public var description: String {
-    return (self.emailString ?? "")
+    return self.emailString
   }
 }

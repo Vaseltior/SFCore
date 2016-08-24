@@ -68,7 +68,7 @@ public protocol SFFileManagerProtocol {
     ///
     /// - returns: BOOL Whether or not th file was created.
     ///
-    static func createFileAtPath(fileData: NSData, atPath path: String) -> Bool
+    static func createFileAtPath(_ fileData: Data, atPath path: String) -> Bool
     
     ///
     /// A file location for an application's main bundle
@@ -77,14 +77,14 @@ public protocol SFFileManagerProtocol {
     ///
     /// - returns: BOOL Whether or not the file was deleted.
     ///
-    static func removeFileAtPath(path: String) -> NSError?
+    static func removeFileAtPath(_ path: String) -> NSError?
     
     ///
     /// Returns the content of the file at path as a string
     ///
     /// - returns: Returns the content of the file at path as a string
     ///
-    static func contentOfFileAtPath(path: String) -> String
+    static func contentOfFileAtPath(_ path: String) -> String
     
     /// MARK: - High Level -
 
@@ -94,5 +94,5 @@ public protocol SFFileManagerProtocol {
     ///
     /// - parameter directoryName: The name of the directory to create.
     ///
-    static func createDirectoryInDocumentsDirectory(directoryName: String)
+    static func createDirectoryInDocumentsDirectory(_ directoryName: String)
 }

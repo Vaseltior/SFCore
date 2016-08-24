@@ -32,78 +32,75 @@
 import Foundation
 
 public class SFQNode<T> {
-    var key: T? = nil
-    var next: SFQNode? = nil
+  var key: T? = nil
+  var next: SFQNode? = nil
 }
 
 public class SFQueue<T> {
-    private var top: SFQNode<T>! = SFQNode<T>()
+  private var top: SFQNode<T>! = SFQNode<T>()
 
-    //enqueue the specified object
-    public func enQueue( key: T) {
-        
-        //check for the instance
-        if (top == nil) {
-            top = SFQNode()
-        }
-        
-        //establish the top node
-        if (top.key == nil) {
-            top.key = key
-            return
-        }
-        
-        let childToUse: SFQNode<T> = SFQNode<T>()
-        var current: SFQNode = top
-        
-        //cycle through the list of items to get to the end.
-        while (current.next != nil) {
-            current = current.next!
-        }
-        //append a new item
-        childToUse.key = key
-        current.next = childToUse
-    }
-    
-    //retrieve items from the top level in O(1) constant time</span>
-    public func deQueue() -> T? {
-        
-        //determine if the key or instance exists</span>
-        let topitem: T? = self.top?.key
-        
-        if (topitem == nil) {
-            return nil
-        }
-        
-        //retrieve and queue the next item</span>
-        let queueitem: T? = top.key!
-        
-        //use optional binding</span>
-        if let nextitem = top.next {
-            top = nextitem
-        } else {
-            top = nil
-        }
-        
-        return queueitem
-    }
-    
-    //check for the presence of a value</span>
-    public func isEmpty() -> Bool {
-        
-        //determine if the key or instance exist</span>
-        if let _: T = self.top?.key {
-            return false
+  // enqueue the specified object
+  public func enQueue(_ key: T) {
 
-        } else {
-            return true
-        }
-        
+    // check for the instance
+    /*if (top == nil) {
+      top = SFQNode()
+    }*/
+
+    // establish the top node
+    if (top.key == nil) {
+      top.key = key
+      return
     }
-    
-    
-    //retrieve the top most item</span>
-    public func peek() -> T? {
-        return top.key!
+
+    let childToUse: SFQNode<T> = SFQNode<T>()
+    var current: SFQNode = top
+
+    // cycle through the list of items to get to the end.
+    while (current.next != nil) {
+      current = current.next!
     }
+    // append a new item
+    childToUse.key = key
+    current.next = childToUse
+  }
+
+  // retrieve items from the top level in O(1) constant time</span>
+  public func deQueue() -> T? {
+
+    // determine if the key or instance exists</span>
+    let topitem: T? = self.top?.key
+
+    if (topitem == nil) {
+      return nil
+    }
+
+    // retrieve and queue the next item</span>
+    let queueitem: T? = top.key!
+
+    // use optional binding</span>
+    if let nextitem = top.next {
+      top = nextitem
+    } else {
+      top = nil
+    }
+
+    return queueitem
+  }
+
+  // check for the presence of a value</span>
+  public func isEmpty() -> Bool {
+
+    // determine if the key or instance exist</span>
+    if let _: T = self.top?.key {
+      return false
+    }
+
+    return true
+  }
+
+  // retrieve the top most item</span>
+  public func peek() -> T? {
+    return top.key ?? nil
+  }
 }

@@ -15,9 +15,9 @@ import UIKit
  - InvalidURL:               If no URL can be build
  - ApplicationCannotOpenURL: If the application is not able to open the URL
  */
-public enum SettingsHelperError: ErrorType {
-  case InvalidURL
-  case ApplicationCannotOpenURL
+public enum SettingsHelperError: ErrorProtocol {
+  case invalidURL
+  case applicationCannotOpenURL
 }
 
 /** 
@@ -33,7 +33,11 @@ public class SettingsHelper {
    */
   public static func openSystemApplicationSettingsPage() throws {
     // Should Block the app
-    try SettingsHelper.buildAndOpenURL(UIApplicationOpenSettingsURLString)
+    do {
+      try SettingsHelper.buildAndOpenURL(UIApplicationOpenSettingsURLString)
+    } catch let error {
+      throw error
+    }
   }
   
   /**
@@ -44,16 +48,16 @@ public class SettingsHelper {
    
    - returns: `true` if the resource located by the URL was successfully opened; otherwise `false`.
    */
-  public static func buildAndOpenURL(URLString: String) throws -> Bool {
-    guard let URL = NSURL(string: URLString) else {
-      throw SettingsHelperError.InvalidURL
+  public static func buildAndOpenURL(_ URLString: String) throws -> Bool {
+    guard let URL = URL(string: URLString) else {
+      throw SettingsHelperError.invalidURL
     }
     
-    if UIApplication.sharedApplication().canOpenURL(URL) {
-      return UIApplication.sharedApplication().openURL(URL)
+    if UIApplication.shared().canOpenURL(URL) {
+      return UIApplication.shared().openURL(URL)
       
     } else {
-      throw SettingsHelperError.ApplicationCannotOpenURL
+      throw SettingsHelperError.applicationCannotOpenURL
       
     }
   }

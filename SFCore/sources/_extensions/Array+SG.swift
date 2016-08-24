@@ -62,7 +62,7 @@ extension Array {
 
    - returns: `true` if the index is out of bounds, otherwise, `false`.
    */
-  public func sfIsIndexOutOfBounds(index: Int) -> Bool {
+  public func sfIsIndexOutOfBounds(_ index: Int) -> Bool {
     return ((index >= self.count) || (index < 0))
   }
   
@@ -73,7 +73,7 @@ extension Array {
   ///
   /// - returns: true if the index is in bounds, otherwise, false
   ///
-  public func sfIsIndexInBounds(index: Int) -> Bool {
+  public func sfIsIndexInBounds(_ index: Int) -> Bool {
     return ((index < self.count) && (index >= 0))
   }
   
@@ -84,9 +84,9 @@ extension Array {
   ///
   /// - returns: true if the array contains the object, else returns false.
   ///
-  func contains<T : Equatable>(obj: T) -> Bool {
+  /*func contains<T : Equatable>(obj: T) -> Bool {
     return self.filter({$0 as? T == obj}).count > 0
-  }
+  }*/
   
   ///
   /// Simple function that tell if the array is sorted.
@@ -94,7 +94,7 @@ extension Array {
   ///
   /// - returns: true if the array is sorted, else returns false.
   ///
-  public static func isSortedAscendingly<T : Comparable>(items:Array<T>) -> Bool {
+  public static func isSortedAscendingly<T : Comparable>(_ items:Array<T>) -> Bool {
     for i in 1..<items.count {
       if (items[i-1] > items[i]) {
         return false

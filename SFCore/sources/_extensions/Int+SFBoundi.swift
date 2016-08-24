@@ -31,22 +31,21 @@
 
 import Foundation
 
-
 extension Int {
-    public static func boundi(value: Int, min: Int, max: Int) -> Int {
-        var iMax = max
-        if (max < min) {
-            iMax = min
-        }
-        
-        var bounded = value
-        if (bounded > iMax) {
-            bounded = iMax
-        }
-        if (bounded < min) {
-            bounded = min
-        }
-        
-        return bounded
+  public static func boundi(_ value: Int, min: Int, max: Int) -> Int {
+    var iMax = max
+    if (max < min) {
+      iMax = min
     }
+
+    var bounded = value
+    if (bounded > iMax) {
+      bounded = iMax
+    }
+    if (bounded < min) {
+      bounded = min
+    }
+
+    return bounded
+  }
 }

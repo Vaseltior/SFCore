@@ -40,7 +40,7 @@ public class SFFileManager : SFFileManagerProtocol {
   /// A file location for an application's main bundle.
   ///
   public class func mainBundleDirectory() -> String? {
-    return NSBundle.mainBundle().resourcePath
+    return Bundle.main().resourcePath
   }
 
   ///
@@ -48,8 +48,8 @@ public class SFFileManager : SFFileManagerProtocol {
   ///
   public class func cachesDirectory() -> String {
     let paths:[AnyObject]! = NSSearchPathForDirectoriesInDomains(
-      NSSearchPathDirectory.CachesDirectory,
-      NSSearchPathDomainMask.UserDomainMask,
+      FileManager.SearchPathDirectory.cachesDirectory,
+      FileManager.SearchPathDomainMask.userDomainMask,
       true
     )
 
@@ -65,8 +65,8 @@ public class SFFileManager : SFFileManagerProtocol {
   ///
   public class func documentsDirectory() -> String {
     let paths:[AnyObject]! = NSSearchPathForDirectoriesInDomains(
-      NSSearchPathDirectory.DocumentDirectory,
-      NSSearchPathDomainMask.UserDomainMask,
+      FileManager.SearchPathDirectory.documentDirectory,
+      FileManager.SearchPathDomainMask.userDomainMask,
       true
     )
 
@@ -88,7 +88,7 @@ public class SFFileManager : SFFileManagerProtocol {
   /// A file location for serializing an application's user object to disk.
   ///
   public class func userFile() -> String {
-    return (self.documentsDirectory() as NSString).stringByAppendingPathComponent("User")
+    return (self.documentsDirectory() as NSString).appendingPathComponent("User")
   }
 
   ///
@@ -99,9 +99,9 @@ public class SFFileManager : SFFileManagerProtocol {
   ///
   /// - returns: BOOL Whether or not th file was created.
   ///
-  public class func createFileAtPath(fileData: NSData, atPath path: String) -> Bool {
-    let fileManager: NSFileManager = NSFileManager.defaultManager()
-    let res = fileManager.createFileAtPath(path, contents: fileData, attributes: nil)
+  public class func createFileAtPath(_ fileData: Data, atPath path: String) -> Bool {
+    let fileManager: FileManager = FileManager.default()
+    let res = fileManager.createFile(atPath: path, contents: fileData, attributes: nil)
     return res
   }
 
@@ -112,19 +112,16 @@ public class SFFileManager : SFFileManagerProtocol {
   ///
   /// - returns: BOOL Whether or not the file was deleted.
   ///
-  public class func removeFileAtPath(path: String) -> NSError? {
+  public class func removeFileAtPath(_ path: String) -> NSError? {
     var error: NSError? = nil
-    let fileManager: NSFileManager = NSFileManager.defaultManager()
+    let fileManager: FileManager = FileManager.default()
     let _: Bool
     do {
-      try fileManager.removeItemAtPath(path)
+      try fileManager.removeItem(atPath: path)
     } catch let error1 as NSError {
       error = error1
     }
-    if let theError = error {
-      return theError
-    }
-    return nil
+    return error
   }
 
   ///
@@ -132,10 +129,10 @@ public class SFFileManager : SFFileManagerProtocol {
   ///
   /// - returns: Returns the content of the file at path as a string
   ///
-  public class func contentOfFileAtPath(path: String) -> String {
+  public class func contentOfFileAtPath(_ path: String) -> String {
     var res = ""
     do {
-      res = try (NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)) as String
+      res = try (NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)) as String
     } catch _ {
     }
 
@@ -150,15 +147,15 @@ public class SFFileManager : SFFileManagerProtocol {
   ///
   /// - parameter directoryName: The name of the directory to create.
   ///
-  public class func createDirectoryInDocumentsDirectory(directoryName: String) {
+  public class func createDirectoryInDocumentsDirectory(_ directoryName: String) {
     let documentsDirectory = self.documentsDirectory() // Get documents folder
-    let dataPath = (documentsDirectory as NSString).stringByAppendingPathComponent(directoryName)
-    let fileManager: NSFileManager = NSFileManager.defaultManager()
+    let dataPath = (documentsDirectory as NSString).appendingPathComponent(directoryName)
+    let fileManager: FileManager = FileManager.default()
 
-    if (!fileManager.fileExistsAtPath(dataPath)) {
+    if (!fileManager.fileExists(atPath: dataPath)) {
       do {
-        try fileManager.createDirectoryAtPath(
-          dataPath,
+        try fileManager.createDirectory(
+          atPath: dataPath,
           withIntermediateDirectories: true,
           attributes: nil)
       } catch _ as NSError {

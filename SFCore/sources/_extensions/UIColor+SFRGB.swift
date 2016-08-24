@@ -33,11 +33,11 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    public class func sfRGB(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+    public class func sfRGB(_ red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return self.sfRGBA(red, green: green, blue: blue, alpha: 1.0)
     }
     
-    public class func sfRGBA(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
+    public class func sfRGBA(_ red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
     }
 }

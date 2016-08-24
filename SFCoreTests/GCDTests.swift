@@ -12,7 +12,12 @@ import XCTest
 class GCDTests: XCTestCase {
   func testGCDMainThread() {
     gcdMainThread {
-      XCTAssertTrue(NSThread.isMainThread(), "The closure should be executed in the main thread")
+      XCTAssertTrue(Thread.isMainThread(), "The closure should be executed in the main thread")
+    }
+  }
+
+  func testGCDDelay() {
+    gcdDelay(5) {
     }
   }
 }
